@@ -141,10 +141,12 @@
     });
     const roll = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (!e.isIntersecting) return;
-      e.target.querySelectorAll("[data-d]").forEach((c) => (c.style.transform = `translateY(-${c.dataset.d}em)`));
+      e.target.classList.add("in");
+      // each digit row is 1em + 1px tall
+      e.target.querySelectorAll("[data-d]").forEach((c) => (c.style.transform = `translateY(calc(-${c.dataset.d}em - ${c.dataset.d}px))`));
       roll.unobserve(e.target);
-    }), { threshold: 0.4 });
-    document.querySelectorAll(".num .val").forEach((el) => roll.observe(el));
+    }), { threshold: 0.3 });
+    document.querySelectorAll(".num").forEach((el) => roll.observe(el));
 
     // Recent video
     const media = $("#recent-media");
