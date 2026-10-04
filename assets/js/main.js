@@ -13,7 +13,7 @@
     el.innerHTML = `
       <a href="index.html" class="brand"><span class="tag">${esc(S.tagline)}</span><span class="nm">${esc(S.name)}</span></a>
       <nav class="nav">
-        <a href="index.html#work" class="${page === "project" ? "active" : ""}">Work</a>
+        <a href="work.html" class="${page === "project" || page === "work" ? "active" : ""}">Work</a>
         <a href="about.html" class="${page === "about" ? "active" : ""}">About</a>
         <a href="mailto:${esc(S.email)}" class="mail">${esc(S.email)}</a>
         <a href="mailto:${esc(S.email)}" class="at" aria-label="Email">@</a>
@@ -32,11 +32,11 @@
     el.innerHTML = `
       <div class="footer-top">
         <span class="lt">Let's talk</span>
-        <div class="footer-socials">${S.socials.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}</div>
+        <div class="footer-socials">${(S.footerSocials || S.socials).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}</div>
       </div>
       <a class="footer-mail" href="mailto:${esc(S.email)}">${esc(S.email)}</a>
       <div class="footer-mid">
-        <nav><a href="index.html">Home</a><a href="index.html#work">Work</a><a href="about.html">About</a></nav>
+        <nav><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a></nav>
         <a href="#top" id="to-top">Back to top</a>
       </div>
       <div class="footer-bot"><span>${esc(S.address)}</span><span>${esc(S.copyright)}</span></div>`;
@@ -64,7 +64,7 @@
           <div class="side-lists">${list("Fields", S.fields)}${list("Previously at", S.previously)}</div>
         </div></aside>
         <div class="projects">
-          ${S.projects.map((p) => `
+          ${(S.homeProjects ? S.homeProjects.map((slug) => S.projects.find((p) => p.slug === slug)) : S.projects).map((p) => `
             <a class="project-card" href="project.html?p=${encodeURIComponent(p.slug)}">
               <img src="${esc(p.cover)}" alt="${esc(p.title)}" loading="lazy">
               <div class="info"><h3>${esc(p.title)}</h3><p><span>Services:</span> ${esc(p.services)}</p></div>
@@ -224,6 +224,10 @@
     const idx = Math.max(0, S.projects.findIndex((p) => p.slug === slug));
     const P = S.projects[idx];
     document.title = `${P.title} — ${S.name}`;
+    if (P.layout === "case-study") {
+      window.renderCaseStudy(P);
+      return;
+    }
     const others = S.projects.filter((_, i) => i !== idx).slice(0, 2);
     const img = (src) => `<div><img src="${esc(src)}" alt="" loading="lazy"></div>`;
     const block = (b) => {
@@ -265,7 +269,7 @@
   if (page === "home") document.title = `${S.name} — ${S.tagline}`;
   if (page === "about") document.title = `About — ${S.name}`;
   header();
-  ({ home, about, project }[page] || (() => {}))();
+  ({ home, about, project, work: window.renderWork }[page] || (() => {}))();
   footer();
 
   const io = new IntersectionObserver((entries) => entries.forEach((e) => {

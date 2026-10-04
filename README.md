@@ -6,6 +6,11 @@
 - `index.html` — головна (ім'я, проєкти, Recent, Timeline, Numbers, Tech stack, Elsewhere)
 - `about.html` — About + форма зв'язку
 - `project.html?p=<slug>` — сторінка проєкту (одна на всі проєкти, наповнюється з `content.js`)
+- `work.html` — Selected Work: список проєктів з анімацією появи та ховерами.
+
+Кейси `project.html?p=car-rental` і `project.html?p=pet-shop` містять відповідно 12 та 16 оригінальних зображень із Framer. Вони збережені локально в `assets/images/car-rental/` і `assets/images/pet-shop/`, без зменшення роздільності. Джерела, розміри й SHA256 наведені в `assets/images/case-study-sources.json`.
+
+У `content.js` список `homeProjects` визначає картки головної, `workProjects` — сторінку Work, а `panels` у нових проєктах — порядок зображень кейсу. Старі проєкти доступні за попередніми адресами. Решта посилань Work ведуть на відповідні сторінки Framer.
 
 ## Як міняти контент
 

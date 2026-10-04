@@ -1,0 +1,236 @@
+{
+  "car": {
+    "sourceUrl": "https://dianahurska.framer.website/work/car-rental/car-rental",
+    "images": [
+      {
+        "url": "https://framerusercontent.com/images/DXnQiDPloW0iKJVWZNr0q7FTm0.png",
+        "localPath": "assets/images/car-rental/01.png",
+        "width": 7680,
+        "height": 4928,
+        "bytes": 3450019,
+        "sha256": "4284e9c428c10b682de8ef2dcab308d025be0b57df5afbf68c6ee4af6c137609"
+      },
+      {
+        "url": "https://framerusercontent.com/images/MMMVxOqs3xCAML8wTm5DGetiJo.png",
+        "localPath": "assets/images/car-rental/02.png",
+        "width": 5760,
+        "height": 3660,
+        "bytes": 1049505,
+        "sha256": "1bc936ec8f56764ffc99e97c9cc5cb1bd3bdfe6c11e3cdddda21d3e1ec93fef9"
+      },
+      {
+        "url": "https://framerusercontent.com/images/VQ6Kf5VVcSDuZjf9Ly6NdWLYTc.png",
+        "localPath": "assets/images/car-rental/03.png",
+        "width": 5760,
+        "height": 2958,
+        "bytes": 213161,
+        "sha256": "f8455d1db0c811138b13f107db0aa4ed2ad5af1c426725b7d4e2be016fd198c5"
+      },
+      {
+        "url": "https://framerusercontent.com/images/a8b0CRvPXK5eAqxncerR3s4.png",
+        "localPath": "assets/images/car-rental/04.png",
+        "width": 5760,
+        "height": 6144,
+        "bytes": 3048670,
+        "sha256": "11b4433e3e43f661065855e077a8f57f78c267c03cf36f62ba337818f2314c99"
+      },
+      {
+        "url": "https://framerusercontent.com/images/LoJmDZcenxC8Y3rJVdxuVofaJqc.png",
+        "localPath": "assets/images/car-rental/05.png",
+        "width": 5760,
+        "height": 5988,
+        "bytes": 261677,
+        "sha256": "cc3a0d3e42e9795d7b06e3806f9ecda8962bb70f4e337120bf68f0c89f5c532b"
+      },
+      {
+        "url": "https://framerusercontent.com/images/IJe8WFO4mGK961eoKo6iKhYJNU.png",
+        "localPath": "assets/images/car-rental/06.png",
+        "width": 5760,
+        "height": 8406,
+        "bytes": 1721211,
+        "sha256": "8979846b5c296c6fc2c5bcb5e1bc7157b1769e2113228da28dbd2eb10964a632"
+      },
+      {
+        "url": "https://framerusercontent.com/images/5IeGw0Q8zhNuu0Hhprt3zF2PjlU.png",
+        "localPath": "assets/images/car-rental/07.png",
+        "width": 5760,
+        "height": 4674,
+        "bytes": 908013,
+        "sha256": "c8fae2c596dc0771b63db59bb16ac7dbe7ace85241cc42b1469da17492f5705a"
+      },
+      {
+        "url": "https://framerusercontent.com/images/bCq9wJqPUwKbiQs0tKQ0ScQeJdU.png",
+        "localPath": "assets/images/car-rental/08.png",
+        "width": 5760,
+        "height": 3861,
+        "bytes": 1381762,
+        "sha256": "a07fcdd496d1f44ac6c54ec6a6211b88c19739320672267804a5be6750482dfa"
+      },
+      {
+        "url": "https://framerusercontent.com/images/T5E6SF44v9hJy1oeJbvmo1oLuBA.png",
+        "localPath": "assets/images/car-rental/09.png",
+        "width": 5760,
+        "height": 3786,
+        "bytes": 816631,
+        "sha256": "6199ad9d80b93b445501b0ade78fbee1eafa2afbfcda8ece42b9cfa2a9edcf27"
+      },
+      {
+        "url": "https://framerusercontent.com/images/W24h5ZbbwrxwQhirUxB38rtkc0.png",
+        "localPath": "assets/images/car-rental/10.png",
+        "width": 5760,
+        "height": 9963,
+        "bytes": 1579162,
+        "sha256": "2034baf40eb68ad40fa979366272eebe59db2182aaef37cf47d28651958c72e4"
+      },
+      {
+        "url": "https://framerusercontent.com/images/iURzlNw9o7QvPaeKOQ6TcNsG5DE.png",
+        "localPath": "assets/images/car-rental/11.png",
+        "width": 5760,
+        "height": 3906,
+        "bytes": 1148352,
+        "sha256": "16a2c36ec91be3cb7842bfd3bd5523a5f6f8f9d6a17bb4eff7c5b47532696ef8"
+      },
+      {
+        "url": "https://framerusercontent.com/images/uQNcZxRPgWzaR1j6VWjLSRqKUUc.png",
+        "localPath": "assets/images/car-rental/12.png",
+        "width": 5760,
+        "height": 3240,
+        "bytes": 930637,
+        "sha256": "4bc15ad31e32bfcfebff62e5d147870272db061239a77ce930fa29d30d907cd1"
+      }
+    ]
+  },
+  "pet": {
+    "sourceUrl": "https://dianahurska.framer.website/work/pet-shop",
+    "images": [
+      {
+        "url": "https://framerusercontent.com/images/2qJ9g6UfnuWuWupHRW2QzjYfCg.png",
+        "localPath": "assets/images/pet-shop/01.png",
+        "width": 5760,
+        "height": 3972,
+        "bytes": 1244000,
+        "sha256": "14ff2b1fe22bc84ae9c76934d4e19b02b7b5887b4b9976ff9d90609ce8e84dbe"
+      },
+      {
+        "url": "https://framerusercontent.com/images/1slg20n8uqMPVPN6DIV2c1eN7Yk.png",
+        "localPath": "assets/images/pet-shop/02.png",
+        "width": 5754,
+        "height": 2319,
+        "bytes": 283994,
+        "sha256": "292cdc70bd58c8e43c4130fd71479bbff7d386eb0d7a8928ca124d3761f2f2e7"
+      },
+      {
+        "url": "https://framerusercontent.com/images/uNsJUuPoWXw9XfgFdzxocmSirU.png",
+        "localPath": "assets/images/pet-shop/03.png",
+        "width": 5757,
+        "height": 3380,
+        "bytes": 673064,
+        "sha256": "0ae83b8fdae14f15635108ba305be752a804522c963e292d2f55fbce77f242f0"
+      },
+      {
+        "url": "https://framerusercontent.com/images/qdtED6t9b888TBgK9bMHNAt4I.png",
+        "localPath": "assets/images/pet-shop/04.png",
+        "width": 5760,
+        "height": 2898,
+        "bytes": 527394,
+        "sha256": "3bf664d1669fe38d0fe683c5e37b5b7760b827d264f708ed7b21d9d0f694cd3b"
+      },
+      {
+        "url": "https://framerusercontent.com/images/E4rtq7n6GiyOJXyfpdqGqWEG6I.png",
+        "localPath": "assets/images/pet-shop/05.png",
+        "width": 5760,
+        "height": 4692,
+        "bytes": 205497,
+        "sha256": "04628d7963738b9425009721c7fc3c06531d1678a1a6da990c3ca2a4e302dd4b"
+      },
+      {
+        "url": "https://framerusercontent.com/images/7aW00E3pJn0Ys704EuJ797EyaY.png",
+        "localPath": "assets/images/pet-shop/06.png",
+        "width": 5760,
+        "height": 5836,
+        "bytes": 298398,
+        "sha256": "a816909ca3e3549001006e4fac4ff878a93fd641266e5c8ea566e6f32ee1595f"
+      },
+      {
+        "url": "https://framerusercontent.com/images/yjnEdwSwmHg4ToBTG5E2g4TOX6w.png",
+        "localPath": "assets/images/pet-shop/07.png",
+        "width": 5760,
+        "height": 6741,
+        "bytes": 989061,
+        "sha256": "a229d3c914496afa6b1175bf2c001bd92eba5a6cec94ae0802434598eb1993e1"
+      },
+      {
+        "url": "https://framerusercontent.com/images/FIM5bwJlhOciFryEjL0cmRjE.png",
+        "localPath": "assets/images/pet-shop/08.png",
+        "width": 5757,
+        "height": 3819,
+        "bytes": 484367,
+        "sha256": "2abdf2e8e5540fe52858825cf983c5057dda3940b6e2b9d0db8a0a5a83da1b6f"
+      },
+      {
+        "url": "https://framerusercontent.com/images/koJNtJTReMsFBzWQTH2FUjHd8c.png",
+        "localPath": "assets/images/pet-shop/09.png",
+        "width": 5757,
+        "height": 9366,
+        "bytes": 1693020,
+        "sha256": "0f3cdb09f4b9e25b6da94f2e94a0759063fbacdeeec476278d09694a83c780b7"
+      },
+      {
+        "url": "https://framerusercontent.com/images/RV3j6GWX2mh4uaoeSeknNdI84PY.png",
+        "localPath": "assets/images/pet-shop/10.png",
+        "width": 5760,
+        "height": 4440,
+        "bytes": 924246,
+        "sha256": "ca6d37cce7df4238fe8cd3e1c9f6b4bcba7f1154ae8b8971dda52cfe37649739"
+      },
+      {
+        "url": "https://framerusercontent.com/images/tnDdjfZ87LedE7xZ6xy7d25ThI.png",
+        "localPath": "assets/images/pet-shop/11.png",
+        "width": 5760,
+        "height": 6957,
+        "bytes": 947746,
+        "sha256": "e8ee1a487e96e7a2c38dc611846f051843fd736fa9a65334fe6c2bfb9cd5013c"
+      },
+      {
+        "url": "https://framerusercontent.com/images/Vhls5HlDAm0OtlGsZ0hBAm2VD0.png",
+        "localPath": "assets/images/pet-shop/12.png",
+        "width": 5760,
+        "height": 7582,
+        "bytes": 1168056,
+        "sha256": "55b9f06b7b87fcfcd13090175f1c6eae73c090a6e1c68e45a41a62fdb279fabf"
+      },
+      {
+        "url": "https://framerusercontent.com/images/aVMnt2RpznbyiXmSCOQWI1U.png",
+        "localPath": "assets/images/pet-shop/13.png",
+        "width": 5760,
+        "height": 9579,
+        "bytes": 5708165,
+        "sha256": "8f7f85cbd9d7360abf0d7a884afac925741d05eb57da61c9999d3393520419a3"
+      },
+      {
+        "url": "https://framerusercontent.com/images/Fe0zDqaIPZex7uGD3wz2zHaVs.png",
+        "localPath": "assets/images/pet-shop/14.png",
+        "width": 5760,
+        "height": 7775,
+        "bytes": 1277900,
+        "sha256": "019b83cd22a4f9a35b6e36c6264d0e30619b8982815dc3a44b858e1f50449255"
+      },
+      {
+        "url": "https://framerusercontent.com/images/GAneA31ohN8nbggHoD4K0ijCLzE.png",
+        "localPath": "assets/images/pet-shop/15.png",
+        "width": 5760,
+        "height": 4367,
+        "bytes": 2368154,
+        "sha256": "b6d0375c6e7c08157bc1e0412b72b3dfdebbd57ea47df5754635e4398a3a5865"
+      },
+      {
+        "url": "https://framerusercontent.com/images/D0j7CoAejkC7yUdWz8sje4USk.png",
+        "localPath": "assets/images/pet-shop/16.png",
+        "width": 5761,
+        "height": 3076,
+        "bytes": 89764,
+        "sha256": "ef3b9820714a28d02e3c1fe2d987c8f99c46aeb5c461db271a5012cb3df300aa"
+      }
+    ]
+  }
+}

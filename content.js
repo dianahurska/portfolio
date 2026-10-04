@@ -6,17 +6,23 @@
  * Поле, яке не потрібне, можна поставити в "" або [] — блок просто сховається.
  */
 window.SITE = {
-  name: "Your Name",
-  tagline: "Product designer focused on beautiful aesthetics",
-  location: "City, Country",
-  email: "hello@yourname.com",
-  address: "Street 1, City, Country",
-  copyright: "© Your Name 2026. All rights reserved",
+  name: "Diana Hurska",
+  tagline: "Senior Product Designer",
+  location: "Warsaw, Poland",
+  email: "dianagurscka3@gmail.com",
+  address: "Warsaw, Poland",
+  copyright: "© Diana Hurska 2026. All rights reserved",
   // Опис для пошукових систем і прев'ю посилань
-  description: "Portfolio of Your Name — product designer.",
+  description: "Portfolio of Diana Hurska — Senior Product Designer.",
 
   fields: ["User interface", "User experience", "Product design", "Video production", "3D"],
-  previously: ["Company One", "Company Two", "Company Three"],
+  previously: ["Facebook Meta", "Nike", "Adobe"],
+
+  footerSocials: [
+    { label: "Behance", url: "https://www.behance.net/d8db8e80" },
+    { label: "Telegram", url: "https://t.me/dianagurska" },
+    { label: "Linkedin", url: "https://www.linkedin.com/in/diana-hurska-design/" }
+  ],
 
   socials: [
     { label: "Dribbble", handle: "yourhandle", url: "https://dribbble.com/" },
@@ -149,3 +155,252 @@ window.SITE = {
     phone: "+1 (555) 000-0000"
   }
 };
+
+// Imported portfolio pages. Original project definitions above remain available.
+window.SITE.homeProjects = ["car-rental", "pet-shop", "project-three", "project-four"];
+window.SITE.workTitle = "Selected Work";
+window.SITE.workLabels = { client: "Client", services: "Services", year: "Year" };
+window.SITE.workProjects = [
+  {
+    "title": "Rental Car App",
+    "client": "UX/UI Designer",
+    "services": "End-to-end car rental experience",
+    "year": "",
+    "cover": "assets/images/car-rental/01.png",
+    "href": "project.html?p=car-rental",
+    "sourceImage": "https://framerusercontent.com/images/DXnQiDPloW0iKJVWZNr0q7FTm0.png",
+    "slug": "car-rental"
+  },
+  {
+    "title": "Happy Tails — Pet E-commerce",
+    "client": "UX/UI Designer",
+    "services": "Simplify product discovery & checkout",
+    "year": "End-to-end commerce experience",
+    "cover": "assets/images/work/pet-shop.png",
+    "href": "project.html?p=pet-shop",
+    "sourceImage": "https://framerusercontent.com/images/CgSVXkZqAJ38SqLaSxiqCxCu1M.png",
+    "slug": "pet-shop"
+  },
+  {
+    "title": "RETALEYE",
+    "client": "Retailvision",
+    "services": "Web design, 3D",
+    "year": "2024",
+    "cover": "assets/images/work/retaileye.png",
+    "href": "https://dianahurska.framer.website/work/retaileye",
+    "sourceImage": "https://framerusercontent.com/images/sNEg3DXRC4D8UPWu2Yq9fb6QGsA.png",
+    "slug": "retaileye"
+  },
+  {
+    "title": "IKEA",
+    "client": "IKEA",
+    "services": "Web design & dev, 3D",
+    "year": "2022",
+    "cover": "assets/images/work/ikea.jpeg",
+    "href": "https://dianahurska.framer.website/work/ikea",
+    "sourceImage": "https://framerusercontent.com/images/Bew6IoasOdfyrsRFbURfpxQMVP0.jpeg",
+    "slug": "ikea"
+  },
+  {
+    "title": "RADIOWATCH",
+    "client": "Spenter",
+    "services": "UI, UX, Product design, 3D",
+    "year": "2024",
+    "cover": "assets/images/work/radiowatch.jpg",
+    "href": "https://dianahurska.framer.website/work/radiowatch",
+    "sourceImage": "https://framerusercontent.com/images/Flx46usgOBAfVNrwBmduA8J9e8.jpg",
+    "slug": "radiowatch"
+  },
+  {
+    "title": "VINYL",
+    "client": "SpinVault",
+    "services": "3D Renders",
+    "year": "2021",
+    "cover": "assets/images/work/vinyl.png",
+    "href": "https://dianahurska.framer.website/work/vinyl",
+    "sourceImage": "https://framerusercontent.com/images/qM7QTXMMetIqEY2FJ4HqsmKBhxE.png",
+    "slug": "vinyl"
+  },
+  {
+    "title": "UI Lens",
+    "client": "Voicu Apostol",
+    "services": "Web design, development",
+    "year": "2023",
+    "cover": "assets/images/work/ui-lens.jpg",
+    "href": "https://dianahurska.framer.website/work/uilens",
+    "sourceImage": "https://framerusercontent.com/images/MFzfvah4LW5T19EZz3LH8z6eHt4.jpg",
+    "slug": "uilens"
+  },
+  {
+    "title": "Eleveight Studio",
+    "client": "Fabian Albert",
+    "services": "Web design, development",
+    "year": "2023",
+    "cover": "assets/images/work/eleveight-studio.png",
+    "href": "https://dianahurska.framer.website/work/eleveight-studio",
+    "sourceImage": "https://framerusercontent.com/images/Uwt2wACVnO6AzuhCuj3JwPso.png",
+    "slug": "eleveight-studio"
+  }
+];
+window.SITE.projects.push(...[
+  {
+    "slug": "car-rental",
+    "title": "Rental Car App",
+    "services": "End-to-end car rental experience",
+    "cover": "assets/images/car-rental/01.png",
+    "layout": "case-study",
+    "source": "https://dianahurska.framer.website/work/car-rental/car-rental",
+    "panels": [
+      {
+        "src": "assets/images/car-rental/01.png",
+        "width": 7680,
+        "height": 4928
+      },
+      {
+        "src": "assets/images/car-rental/02.png",
+        "width": 5760,
+        "height": 3660
+      },
+      {
+        "src": "assets/images/car-rental/03.png",
+        "width": 5760,
+        "height": 2958
+      },
+      {
+        "src": "assets/images/car-rental/04.png",
+        "width": 5760,
+        "height": 6144
+      },
+      {
+        "src": "assets/images/car-rental/05.png",
+        "width": 5760,
+        "height": 5988
+      },
+      {
+        "src": "assets/images/car-rental/06.png",
+        "width": 5760,
+        "height": 8406
+      },
+      {
+        "src": "assets/images/car-rental/07.png",
+        "width": 5760,
+        "height": 4674
+      },
+      {
+        "src": "assets/images/car-rental/08.png",
+        "width": 5760,
+        "height": 3861
+      },
+      {
+        "src": "assets/images/car-rental/09.png",
+        "width": 5760,
+        "height": 3786
+      },
+      {
+        "src": "assets/images/car-rental/10.png",
+        "width": 5760,
+        "height": 9963
+      },
+      {
+        "src": "assets/images/car-rental/11.png",
+        "width": 5760,
+        "height": 3906
+      },
+      {
+        "src": "assets/images/car-rental/12.png",
+        "width": 5760,
+        "height": 3240
+      }
+    ]
+  },
+  {
+    "slug": "pet-shop",
+    "title": "Happy Tails — Pet E-commerce",
+    "services": "Simplify product discovery & checkout",
+    "cover": "assets/images/work/pet-shop.png",
+    "layout": "case-study",
+    "source": "https://dianahurska.framer.website/work/pet-shop",
+    "panels": [
+      {
+        "src": "assets/images/pet-shop/01.png",
+        "width": 5760,
+        "height": 3972
+      },
+      {
+        "src": "assets/images/pet-shop/02.png",
+        "width": 5754,
+        "height": 2319
+      },
+      {
+        "src": "assets/images/pet-shop/03.png",
+        "width": 5757,
+        "height": 3380
+      },
+      {
+        "src": "assets/images/pet-shop/04.png",
+        "width": 5760,
+        "height": 2898
+      },
+      {
+        "src": "assets/images/pet-shop/05.png",
+        "width": 5760,
+        "height": 4692
+      },
+      {
+        "src": "assets/images/pet-shop/06.png",
+        "width": 5760,
+        "height": 5836
+      },
+      {
+        "src": "assets/images/pet-shop/07.png",
+        "width": 5760,
+        "height": 6741
+      },
+      {
+        "src": "assets/images/pet-shop/08.png",
+        "width": 5757,
+        "height": 3819
+      },
+      {
+        "src": "assets/images/pet-shop/09.png",
+        "width": 5757,
+        "height": 9366
+      },
+      {
+        "src": "assets/images/pet-shop/10.png",
+        "width": 5760,
+        "height": 4440
+      },
+      {
+        "src": "assets/images/pet-shop/11.png",
+        "width": 5760,
+        "height": 6957
+      },
+      {
+        "src": "assets/images/pet-shop/12.png",
+        "width": 5760,
+        "height": 7582
+      },
+      {
+        "src": "assets/images/pet-shop/13.png",
+        "width": 5760,
+        "height": 9579
+      },
+      {
+        "src": "assets/images/pet-shop/14.png",
+        "width": 5760,
+        "height": 7775
+      },
+      {
+        "src": "assets/images/pet-shop/15.png",
+        "width": 5760,
+        "height": 4367
+      },
+      {
+        "src": "assets/images/pet-shop/16.png",
+        "width": 5761,
+        "height": 3076
+      }
+    ]
+  }
+]);
