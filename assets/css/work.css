@@ -4,7 +4,7 @@
 @font-face { font-family: "Work Inter"; src: url("../fonts/work-inter-700.woff2") format("woff2"); font-style: normal; font-weight: 700; font-display: swap; }
 
 body[data-page="work"] { font-family: "Work Inter", var(--font); }
-.work-page { max-width: 1500px; margin-inline: auto; padding: 109px 44px 120px; }
+.work-page { max-width: 1500px; margin-inline: auto; padding: 109px var(--gutter) 120px; }
 .work-title { font-size: 38px; line-height: 1; font-weight: 500; letter-spacing: -.05em; }
 .work-list { display: flex; flex-direction: column; gap: 60px; padding-top: 40px; }
 .work-card { display: flex; align-items: stretch; gap: 40px; background: #0d0d0d; transition: background-color .5s cubic-bezier(.2,.75,.25,1); }
@@ -18,7 +18,7 @@ body[data-page="work"] { font-family: "Work Inter", var(--font); }
 .work-detail { display: flex; align-items: flex-start; gap: 4px; padding: 4px 0; border-bottom: 1px solid #222; font-size: 16px; line-height: 1.8; letter-spacing: .01em; }
 .work-detail dt { width: 105px; flex-shrink: 0; color: #878787; }
 .work-detail dd { min-width: 0; margin: 0; color: #e3e3e3; }
-.work-client dd, .work-year dd { white-space: nowrap; }
+.work-client dd, .work-year dd { overflow-wrap: anywhere; }
 .work-card:focus-visible { outline: 2px solid #e3e3e3; outline-offset: 5px; }
 .work-card:focus-visible, .work-card:focus-visible .work-info { background: #171717; }
 .work-card:focus-visible .work-arrow { opacity: 1; top: 20px; right: 20px; }

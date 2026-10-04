@@ -43,9 +43,6 @@
     $("#to-top").addEventListener("click", (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
   }
 
-  const list = (title, items) => items && items.length
-    ? `<div class="side-list"><h4>${esc(title)}</h4><ul>${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></div>` : "";
-
   const logo = (src, name) => src
     ? `<img class="logo-img" src="${esc(src)}" alt="">`
     : `<span class="logo-dot">${esc((name || "?")[0])}</span>`;
@@ -61,7 +58,13 @@
             <p class="hero-tag-m">${esc(S.tagline)}</p>
             <p class="hero-loc">${esc(S.location)}</p>
           </div>
-          <div class="side-lists">${list("Fields", S.fields)}${list("Previously at", S.previously)}</div>
+          <section class="core-skills" aria-labelledby="core-skills-title">
+            <h2 id="core-skills-title">${esc(S.coreSkills.title)}</h2>
+            ${S.coreSkills.groups.map((group) => `<div class="core-skills-group">
+              <h3>${esc(group.title)}</h3>
+              <ul>${group.items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
+            </div>`).join("")}
+          </section>
         </div></aside>
         <div class="projects">
           ${(S.homeProjects ? S.homeProjects.map((slug) => S.projects.find((p) => p.slug === slug)) : S.projects).map((p) => `
@@ -165,7 +168,7 @@
   /* ---------- About ---------- */
   function about() {
     const A = S.about, C = S.contact;
-    const skills = S.fields.concat(S.fields);
+    const skills = A.skills.concat(A.skills);
     $("#app").innerHTML = `
       <section class="page">
         <h1 class="page-title">About</h1>
@@ -188,11 +191,6 @@
             <button type="submit">Send message ${arrow}</button>
             <p class="status" id="form-status" hidden></p>
           </form>
-        </div>
-        <div class="studio">
-          <b>Studio:</b><br>${esc(C.studioName)}<br>
-          ${C.studioAddress.map(esc).join("<br>")}
-          <p class="ph">${esc(C.phone)}</p>
         </div>
       </section>`;
 

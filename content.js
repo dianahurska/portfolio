@@ -16,7 +16,30 @@ window.SITE = {
   description: "Portfolio of Diana Hurska — Senior Product Designer.",
 
   fields: ["User interface", "User experience", "Product design", "Video production", "3D"],
-  previously: ["Facebook Meta", "Nike", "Adobe"],
+  coreSkills: {
+    title: "CORE SKILLS",
+    groups: [
+      {
+        title: "Product & UX",
+        items: [
+          "Product Discovery & UX Strategy",
+          "Interaction Design & Information Architecture",
+          "Design Systems & Cross-platform UX",
+          "Product Analytics & A/B Testing",
+          "Stakeholder Management & Cross-functional Collaboration"
+        ]
+      },
+      {
+        title: "Design & AI Tools",
+        items: [
+          "AI-assisted Research, Ideation & Prototyping",
+          "Figma — Prototyping, Design Systems, Dev Mode",
+          "Google Analytics, Hotjar, Maze",
+          "Adobe Creative Suite"
+        ]
+      }
+    ]
+  },
 
   footerSocials: [
     { label: "Behance", url: "https://www.behance.net/d8db8e80" },
@@ -25,11 +48,9 @@ window.SITE = {
   ],
 
   socials: [
-    { label: "Dribbble", handle: "yourhandle", url: "https://dribbble.com/" },
-    { label: "Behance", handle: "Your Name", url: "https://www.behance.net/" },
-    { label: "Layers.to", handle: "yourhandle", url: "https://layers.to/" },
-    { label: "YouTube", handle: "yourchannel", url: "https://www.youtube.com/" },
-    { label: "x.com", handle: "@yourhandle", url: "https://x.com/" }
+    { label: "Behance", handle: "Diana Hurska", url: "https://www.behance.net/d8db8e80" },
+    { label: "Telegram", handle: "@dianagurska", url: "https://t.me/dianagurska" },
+    { label: "Linkedin", handle: "Diana Hurska", url: "https://www.linkedin.com/in/diana-hurska-design/" }
   ],
 
   // Проєкти: показуються на головній (картки справа) і мають власну сторінку project.html?p=<slug>
@@ -142,17 +163,15 @@ window.SITE = {
 
   about: {
     label: "I am",
-    bio: "Short intro about yourself: who you are, what you do and what kind of work you love. Two or three sentences are enough — this text sits next to your portrait on the About page.",
+    skills: ["Product Discovery", "UX Strategy", "Interaction Design", "Information Architecture", "Design Systems", "Product Analytics", "A/B Testing", "Figma", "Design Systems", "Google Analytics", "Hotjar", "Maze"],
+    bio: "Senior Product Designer with end-to-end experience across web and mobile, specializing in complex workflows, information architecture, interaction design, design systems, and AI-powered product experiences. Strong in translating business and technical constraints into scalable UX, validating decisions through research, prototypes, and behavioral data, and partnering with Product and Engineering from discovery through delivery.",
     portrait: "assets/images/portrait.svg"
   },
 
   contact: {
     // Щоб форма реально надсилала листи — зареєструйся на https://formspree.io і встав сюди endpoint,
     // напр. "https://formspree.io/f/abcdwxyz". Якщо порожньо — форма відкриє поштовий клієнт (mailto).
-    formEndpoint: "",
-    studioName: "Your Studio",
-    studioAddress: ["Street 1, Suite 2", "City, ZIP", "Country"],
-    phone: "+1 (555) 000-0000"
+    formEndpoint: ""
   }
 };
 
