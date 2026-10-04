@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Not found</title>
+  <script>
+    // GitHub Pages: перенаправляємо на головну репозиторію
+    var base = location.pathname.split("/")[1];
+    location.replace(location.hostname.endsWith("github.io") && base ? "/" + base + "/" : "/");
+  </script>
+</head>
+<body style="background:#0d0d0d"></body>
+</html>

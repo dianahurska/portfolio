@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a5f58"/><stop offset="1" stop-color="#2b2f2a"/></linearGradient></defs>
+<rect width="1200" height="1500" fill="url(#g)"/>
+<text x="50%" y="50%" fill="rgba(255,255,255,.35)" font-family="Inter,Arial,sans-serif" font-size="54" letter-spacing="6" text-anchor="middle" dominant-baseline="middle">PORTRAIT</text>
+<text x="50%" y="58%" fill="rgba(255,255,255,.35)" font-family="Inter,Arial,sans-serif" font-size="20" text-anchor="middle">assets/images/portrait.svg</text>
+</svg>
