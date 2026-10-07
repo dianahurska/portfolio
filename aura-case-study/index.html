@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AURA Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="css/aura-case.css">
+</head>
+<body>
+<!-- SITE HEADER / NAV goes here -->
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="4.5"/><path d="M3.5 21c0-4.7 3.8-7.5 8.5-7.5s8.5 2.8 8.5 7.5z"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><path d="M8.5 3h7v4h-2V5h-3v2h-2z"/><rect x="2.5" y="6.5" width="19" height="14" rx="3"/><path style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" d="M2.5 12.5h19"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" d="M9.3 9.3a2.8 2.8 0 1 1 4 2.5c-.9.5-1.3 1.1-1.3 2"/><circle style="fill:var(--tb,#161616)" cx="12" cy="17" r="1.2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l9 3.2v6.3c0 5.4-3.8 9-9 10.5-5.2-1.5-9-5.1-9-10.5V5.2z"/><path style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" d="M8.3 12l2.7 2.7 4.8-5.2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M10 2.5l2.1 6.4 6.4 2.1-6.4 2.1L10 19.5l-2.1-6.4L1.5 11l6.4-2.1zM19 14.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path style="fill:var(--tb,#161616)" d="M13.2 5.5L7.5 13h3.7l-.6 5.5 5.9-7.8h-3.8z"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><circle style="fill:none;stroke:currentColor;stroke-width:2" cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><rect x="3" y="3.5" width="18" height="4.6" rx="2.3"/><rect x="3" y="9.7" width="18" height="4.6" rx="2.3" opacity=".6"/><rect x="3" y="15.9" width="18" height="4.6" rx="2.3" opacity=".3"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><rect x="3" y="14" width="4.6" height="7" rx="2.3"/><rect x="9.7" y="9" width="4.6" height="12" rx="2.3"/><rect x="16.4" y="3" width="4.6" height="18" rx="2.3"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle style="fill:var(--tb,#161616)" cx="12" cy="12" r="3.4"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><rect x="2" y="4.5" width="20" height="6" rx="3"/><rect x="2" y="13.5" width="20" height="6" rx="3"/><circle style="fill:var(--tb,#161616)" cx="16.5" cy="7.5" r="1.7"/><circle style="fill:var(--tb,#161616)" cx="7.5" cy="16.5" r="1.7"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" d="M7.5 12h9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" d="M7.8 12.3l2.9 2.9 5.5-6.1"/></symbol>
+  <symbol id="i-sheet" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="4"/><path style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" d="M5 11.5h14M10 16.5h4"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" d="M7.5 11a4.6 4.6 0 0 1 8.3-1.8M16.5 13a4.6 4.6 0 0 1-8.3 1.8M16 6.5v3h-3M8 17.5v-3h3"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5.5" style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="12" cy="12" r="1.6" style="fill:var(--tb,#161616)"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4.3 12.5c.8.7 1.3 1.5 1.3 2.5h6c0-1 .5-1.8 1.3-2.5A7 7 0 0 0 12 2zM9.5 19h5v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-funnel" viewBox="0 0 24 24"><path d="M3.5 4h17a1 1 0 0 1 .8 1.6L15 13v6.2a1 1 0 0 1-.6.9l-4 1.7a1 1 0 0 1-1.4-.9V13L2.7 5.6A1 1 0 0 1 3.5 4z"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 16l8-8M10.5 8H16v5.5" style="fill:none;stroke:var(--tb,#161616);stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/></symbol>
+</defs></svg>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<header class="hero wrap">
+  <h1>AURA — AI Financial Agent</h1>
+  <div class="meta">
+    <div class="meta-side">
+      <p><span>Role:</span>Product Designer</p>
+      <p><span>Platform:</span>iOS + Web</p>
+      <p class="year"><span>Year:</span><b>2026</b></p>
+    </div>
+    <div class="meta-main">
+      <p><span>Tools:</span>Figma AI · Claude · ChatGPT · Codex · GitHub · Maze</p>
+      <p><span>Scope:</span>Research, Strategy, UX, UI, Prototyping, Testing</p>
+      <div class="about"><span>About:</span>
+        <p>AURA explores a core barrier to AI in finance: people want smarter financial help, but they don’t fully trust AI with their money. The product is designed to build that trust through explainable recommendations, explicit approvals, and progressive autonomy across cash, investments, and crypto.</p>
+      </div>
+    </div>
+  </div>
+  <!-- VIDEO SLOT · hero: replace <img> with <video autoplay muted loop playsinline poster="assets/hero-laptop.webp" src="assets/aura-desktop-macbook.mp4"> -->
+  <figure class="frame frame--bleed"><img src="assets/hero-laptop.webp" width="1440" height="810" alt="AURA desktop dashboard on a laptop"></figure>
+</header>
+
+<!-- ============ 02 THE PROBLEM (merged with business problem) ============ -->
+<section class="sec wrap" id="problem">
+  <div class="head"><span class="eyebrow"><b>01</b>The problem</span><h2>AI can understand your money. <em>But would you let it move it?</em></h2></div>
+  <div class="body prob">
+    <div class="tiles n2">
+      <div class="tile ptile"><svg class="i"><use href="#i-user"/></svg><span class="label">User problem</span><p class="pt">Users want smarter financial help, but don’t fully trust AI to act with their money.</p></div>
+      <div class="tile ptile"><svg class="i"><use href="#i-brief"/></svg><span class="label">Business problem</span><p class="pt">AI insights often stop at awareness: recommendations don’t turn into actions, automation adoption stays low, and recurring AI value remains weak.</p></div>
+    </div>
+    <div class="tension">
+      <span class="label"><svg class="i li"><use href="#i-scale"/></svg>Core tension</span>
+      <p class="tension-line"><span>More autonomy → more convenience,</span> <em>but potentially less trust.</em></p>
+      <div class="tension-bar" aria-hidden="true"><i></i></div>
+    </div>
+    <div class="tiles prob-end">
+      <div class="tile ptile"><svg class="i"><use href="#i-target"/></svg><span class="label">Business objective</span><p class="pt">Move users from passive financial monitoring toward recurring AI-assisted actions.</p></div>
+      <div class="tile ptile tile--blue"><svg class="i"><use href="#i-bulb"/></svg><span class="label">How might we</span><p class="pt">How might we increase the value and usage of AI-powered financial actions without reducing users’ sense of control?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 SUCCESS METRICS ============ -->
+<section class="sec wrap" id="metrics">
+  <div class="head"><span class="eyebrow"><b>02</b>Success metrics</span><h2>How success would be measured</h2></div>
+  <div class="body cols t5" style="align-items:stretch">
+    <div>
+      <span class="label label--gap"><svg class="i li"><use href="#i-funnel"/></svg>Primary funnel</span>
+      <ol class="funnel">
+        <li style="--i:0">AI insight viewed</li>
+        <li style="--i:1">Recommendation opened</li>
+        <li style="--i:2">Action reviewed</li>
+        <li style="--i:3">Action approved</li>
+        <li style="--i:4">Action completed</li>
+        <li style="--i:5" class="out">Repeated AI usage</li>
+        <li style="--i:6" class="out">Automation enabled</li>
+      </ol>
+    </div>
+    <div class="stack">
+      <div>
+        <span class="label label--gap"><svg class="i li"><use href="#i-target"/></svg>Primary metric</span>
+        <div class="tile metric-hero">
+          <p class="xl">Insight → Action Conversion Rate</p>
+          <div class="frac"><span>Users who complete an AI-recommended action</span><i></i><span>users who viewed the recommendation</span></div>
+        </div>
+      </div>
+      <dl class="mgrid">
+        <div><dt>Review Rate</dt><dd>Opened / impressions</dd></div>
+        <div><dt>Approval CR</dt><dd>Approved / reviewed</dd></div>
+        <div><dt>Dismissal Rate</dt><dd>Dismissed / reviewed</dd></div>
+        <div><dt>AI WAU / MAU</dt><dd>Active AI users</dd></div>
+        <div><dt>Repeat AI Usage</dt><dd>Back to AI in 7 / 30 days</dd></div>
+        <div><dt>Automation Adoption</dt><dd>At least one rule enabled</dd></div>
+        <div><dt>4-week Retention</dt><dd>Returns after 4 weeks</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="body">
+    <span class="label label--gap"><svg class="i li"><use href="#i-trend"/></svg>UX metrics → Business outcomes</span>
+    <ol class="chain">
+      <li>Better recommendations</li>
+      <li>Higher recommendation CR</li>
+      <li>More successful AI actions</li>
+      <li>Higher perceived product value</li>
+      <li>Higher retention</li>
+      <li>Lower churn</li>
+      <li>Higher LTV</li>
+    </ol>
+    <div class="ltv">
+      <p class="xl">LTV ≈ ARPU × Gross Margin / Monthly Churn</p>
+      <p class="muted">CR is the short-term signal. Retention shows AI became a habit. Churn rises when value or trust is missing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 RESEARCH ============ -->
+<section class="sec wrap" id="research">
+  <div class="head"><span class="eyebrow"><b>03</b>Research</span><h2>People use AI for money. They don't yet let it act.</h2></div>
+  <div class="body">
+    <div class="nums">
+      <div class="num"><b><span data-count="55">55</span><sup>%</sup></b><p>use AI to help manage their finances</p></div>
+      <div class="num"><b><span data-count="46">46</span><sup>%</sup></b><p>say transparency about AI use increases their confidence</p></div>
+      <div class="num"><b><span data-count="70">70</span><sup>%</sup></b><p>must be able to review or override AI’s decision</p></div>
+      <div class="num"><b><span data-count="82">82</span><sup>%</sup></b><p>would not trust AI to make financial recommendations on its own</p></div>
+    </div>
+    <p class="note">Market research · <a href="https://stories.td.com/volumes/default/2026-TD-AI-Insights-Report.pdf" target="_blank" rel="noopener">TD Bank, 2026 AI Insights Report</a> (n = 2,504, US) — 55%, 46%, 82% · <a href="https://www.nmi.com/about-us/news/nmi-research-consumers-want-ai-to-help-them-shop-not-control-their-spending/" target="_blank" rel="noopener">NMI, Agentic Commerce Reality Check, 2026</a> (n = 1,000, US) — 70%</p>
+  </div>
+  <div class="body tiles rs">
+    <div class="tile survey">
+      <div class="stack" style="gap:8px">
+        <div class="chip-row"><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2.5h7l4.5 4.5v12.5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2z"/><path d="M8.5 11.5h7M8.5 15h7M8.5 18.5h4" style="fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linecap:round"/></svg></span><span class="label">Google Forms survey · Completed</span></div>
+        <h3>Qualitative research · 6 participants</h3>
+        <p>Mobile-banking users with investments or crypto who use AI at least sometimes</p>
+        <ul class="dots" style="margin-top:8px;font-size:var(--t-sm)">
+          <li>When did you last make a financial decision — and how?</li>
+          <li>What must AI show before you trust a recommendation?</li>
+          <li>Which action would you never let AI do automatically? Which would you?</li>
+          <li>Does the answer change for €20 / €200 / €2,000? For crypto?</li>
+        </ul>
+      </div>
+      <figure class="survey-shot"><img src="assets/google-form.webp" width="700" height="817" alt="The Google Forms survey used for the qualitative research" loading="lazy"></figure>
+    </div>
+    <div class="tile tile--blue">
+      <div class="chip-row"><span class="chip chip--inv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-4.3 12.5c.8.7 1.3 1.5 1.3 2.5h6c0-1 .5-1.8 1.3-2.5A7 7 0 0 0 12 2zM9.5 19h5v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2z"/></svg></span><span class="label">Working insight</span></div>
+      <div class="stack" style="gap:8px"><h3>Trust isn't binary. It changes with action type, risk and amount.</h3>
+      <p>The opportunity wasn't simply to add AI. It was to design the right level of autonomy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 INSIGHTS & HYPOTHESES ============ -->
+<section class="sec wrap" id="insights">
+  <div class="head"><span class="eyebrow"><b>04</b>Insights &amp; hypotheses</span><h2>Four insights, five testable bets</h2></div>
+  <div class="body tiles n4">
+    <div class="tile"><span class="k">01</span><svg class="i"><use href="#i-help"/></svg><h3>A reason, not just a recommendation</h3><p>“€1,240 above your buffer; €3,000 stays for emergencies” beats “Invest €700”.</p></div>
+    <div class="tile"><span class="k">02</span><svg class="i"><use href="#i-shield"/></svg><h3>Trust depends on the action</h3><p>Savings ≠ investment ≠ crypto. Savings → automatic, crypto → always ask.</p></div>
+    <div class="tile"><span class="k">03</span><svg class="i"><use href="#i-spark"/></svg><h3>AI needs to be proactive</h3><p>Users don't always know what to ask — so the default is an opportunities feed, not a blank chatbot.</p></div>
+    <div class="tile"><span class="k">04</span><svg class="i"><use href="#i-bolt"/></svg><h3>Automation should be earned</h3><p>Suggest → repeated approvals → “Automate transfers up to €200?” Never at onboarding.</p></div>
+  </div>
+  <div class="body">
+    <div class="list hyp">
+      <div class="th"><span>Hypothesis</span><span>Impact</span><span>Status · validated in test ↓</span></div>
+      <div><p>Explaining “why” before asking for approval increases action conversion<small>9/9 completed recommendation → approval unaided</small></p><span>↑ Approval CR</span><span class="st ok">Supported</span></div>
+      <div><p>Proactive insights generate more engagement than chat-first AI<small>9/9 acted from the Home insight; chat popup called confusing</small></p><span>↑ AI engagement</span><span class="st ok">Supported</span></div>
+      <div><p>Autonomy levels make users more comfortable with automation<small>8/9 set “automatic under €200” · 1 drop-off</small></p><span>↑ Automation adoption</span><span class="st">Partially validated</span></div>
+      <div><p>Separate permissions for savings, investments and crypto increase perceived control<small>8/9 set crypto to “Always ask”; 1 asked for one permissions page</small></p><span>↑ Trust</span><span class="st">Partially validated</span></div>
+      <div><p>Offering automation after repeated approvals beats asking during onboarding<small>“Repeated approvals take a lot of time…”</small></p><span>↑ Automation CR</span><span class="st ok">Supported</span></div>
+    </div>
+    <p class="note">Round 1 · n = 9, unmoderated Maze test. Statuses are directional — based on task success and open feedback, not on live conversion data. Validated in the usability test, see <a href="#testing">08 Usability testing</a> below.</p>
+  </div>
+</section>
+
+<!-- ============ 07 CONCEPT & WIREFRAME ============ -->
+<section class="sec wrap" id="concept">
+  <div class="head"><span class="eyebrow"><b>05</b>Concept &amp; wireframe</span><h2>Concepts</h2></div>
+  <div class="body cols t5" style="align-items:center">
+    <div>
+      <div class="concept"><span class="n">01</span><div><h3>Chat-first AI</h3><p>Ask AURA → type question → answer</p><p class="why">Required users to know what to ask and hid proactive value.</p></div></div>
+      <div class="concept"><span class="n">02</span><div><h3>Insight-first AI</h3><p>Detects opportunity → explains → action</p><p class="why">AURA became proactive instead of reactive.</p></div></div>
+      <div class="concept chosen"><span class="n">03</span><div><h3>Controlled autonomy<span class="badge"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4l3 3 6-6.6"/></svg>Chosen</span></h3><p>Suggest → Ask before acting → Automatic within limits</p><p class="why">Automation became a spectrum, not an on/off permission.</p></div></div>
+    </div>
+    <!-- VIDEO SLOT · wireframes: replace <img> with the wireframes video -->
+    <figure class="frame"><img src="assets/wireframe.webp" width="1395" height="993" alt="Low-fidelity wireframe of the AURA desktop overview" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ============ 08 INFORMATION ARCHITECTURE ============ -->
+<section class="sec wrap" id="ia">
+  <div class="head"><span class="eyebrow"><b>06</b>Information architecture</span></div>
+  <div class="body tree" role="img" aria-label="Information architecture: Home branches into Assets (Cash, Investments, Crypto), AI (Insights, Chat, Voice), Activity (Transactions, AI actions) and Control (Autonomy, Permissions, Limits)">
+    <div class="tree-root"><span class="node root">Home</span></div>
+    <div class="branches">
+      <div class="branch" style="--n:3"><span class="node">Assets</span><ul><li><span class="node leaf">Cash</span></li><li><span class="node leaf">Investments</span></li><li><span class="node leaf">Crypto</span></li></ul></div>
+      <div class="branch" style="--n:3"><span class="node">AI</span><ul><li><span class="node leaf">Insights</span></li><li><span class="node leaf">Chat</span></li><li><span class="node leaf">Voice</span></li></ul></div>
+      <div class="branch" style="--n:2"><span class="node">Activity</span><ul><li><span class="node leaf">Transactions</span></li><li><span class="node leaf">AI actions</span></li></ul></div>
+      <div class="branch" style="--n:3"><span class="node">Control</span><ul><li><span class="node leaf">Autonomy</span></li><li><span class="node leaf">Permissions</span></li><li><span class="node leaf">Limits</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 CORE EXPERIENCE (pinned, 3 flows) ============ -->
+<section class="sec pin" id="core" style="--n:3">
+  <div class="pin-track">
+    <div class="pin-sticky wrap">
+      <div class="head"><span class="eyebrow"><b>07</b>Core experience</span></div>
+      <div class="pin-list">
+        <article class="pin-item is-active">
+          <div class="copy">
+            <span class="step">01</span><h2>From insight to confident action</h2>
+            <dl class="facts">
+              <div><dt>AI Insights → Action</dt><dd class="muted">Turn financial insights into action<br>AURA proactively detects opportunities and explains why they matter before suggesting a financial action.</dd></div>
+              <div><dt>Value:</dt><dd>Faster decisions with full control.</dd></div>
+            </dl>
+          </div>
+          <!-- PROTOTYPE SLOT · flow 1: swap the screen sequence for the recorded prototype -->
+          <div class="stage">
+            <div class="seg" role="group" aria-label="Device"><button type="button" data-device="mobile" aria-pressed="true">Mobile</button><button type="button" data-device="desktop" aria-pressed="false">Desktop</button></div>
+            <div class="device">
+              <div class="shots" data-set="mobile">
+                <img class="on" src="assets/m-home.webp" alt="Home with AURA insight" loading="lazy">
+                <img src="assets/m-insights.webp" alt="AI Insights feed" loading="lazy">
+                <img src="assets/m-recommendation.webp" alt="Recommendation" loading="lazy">
+                <img src="assets/m-approval.webp" alt="Review AI action sheet" loading="lazy">
+                <img src="assets/m-success.webp" alt="Transfer completed" loading="lazy">
+              </div>
+              <div class="shots" data-set="desktop">
+                <img class="on" src="assets/d-overview.webp" alt="Desktop financial overview" loading="lazy">
+                <img src="assets/d-portfolio.webp" alt="Desktop portfolio analytics" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="pin-item">
+          <div class="copy">
+            <span class="step">02</span><h2>Automation that earns trust</h2>
+            <dl class="facts">
+              <div><dt>Action → Automation</dt><dd class="muted">After repeated approvals, AURA suggests automating similar actions within user-defined permissions and limits.</dd></div>
+              <div><dt>Value:</dt><dd>More convenience without losing control.</dd></div>
+            </dl>
+          </div>
+          <!-- PROTOTYPE SLOT · flow 2 -->
+          <div class="stage">
+            <div class="seg" role="group" aria-label="Device"><button type="button" data-device="mobile" aria-pressed="true">Mobile</button><button type="button" data-device="desktop" aria-pressed="false">Desktop</button></div>
+            <div class="device">
+              <div class="shots" data-set="mobile">
+                <img class="on" src="assets/m-success.webp" alt="Automation suggestion after transfer" loading="lazy">
+                <img src="assets/m-upgrade.webp" alt="Autonomy upgrade" loading="lazy">
+                <img src="assets/m-control.webp" alt="AI Control" loading="lazy">
+                <img src="assets/m-activity.webp" alt="AI Activity" loading="lazy">
+              </div>
+              <div class="shots" data-set="desktop">
+                <img class="on" src="assets/d-control.webp" alt="Desktop AI automation center" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="pin-item">
+          <div class="copy">
+            <span class="step">03</span><h2>Ask naturally. Act faster.</h2>
+            <dl class="facts">
+              <div><dt>Ask AURA → Voice</dt><dd class="muted">Users can ask AURA about spending, savings or investments and continue the same interaction through voice.</dd></div>
+              <div><dt>Value:</dt><dd>Faster access to financial answers and actions.</dd></div>
+            </dl>
+          </div>
+          <!-- PROTOTYPE SLOT · flow 3 -->
+          <div class="stage">
+            <div class="seg" role="group" aria-label="Device"><button type="button" data-device="mobile" aria-pressed="true">Mobile</button><button type="button" data-device="desktop" aria-pressed="false">Desktop</button></div>
+            <div class="device">
+              <div class="shots" data-set="mobile">
+                <img class="on" src="assets/m-ask.webp" alt="Ask AURA welcome" loading="lazy">
+                <img src="assets/m-answer.webp" alt="Ask AURA answer" loading="lazy">
+                <img src="assets/m-voice.webp" alt="Voice" loading="lazy">
+              </div>
+              <div class="shots" data-set="desktop">
+                <img class="on" src="assets/d-ask.webp" alt="Desktop Ask AURA panel" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pager" role="group" aria-label="Flow">
+          <button type="button" aria-label="Flow 1" aria-current="true"></button>
+          <button type="button" aria-label="Flow 2"></button>
+          <button type="button" aria-label="Flow 3"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCREENS · full-bleed row, moves horizontally with page scroll ============ -->
+<section class="gallery" id="screens" aria-label="Mobile screens">
+  <div class="gallery-sticky">
+    <div class="gallery-view" tabindex="0">
+      <div class="gallery-row">
+        <div class="phone"><img src="assets/m-home.webp" alt="Home" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-insights.webp" alt="AI Insights" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-recommendation.webp" alt="Recommendation" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-approval.webp" alt="Approval sheet" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-success.webp" alt="Approval success" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-portfolio.webp" alt="Portfolio" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-activity.webp" alt="AI Activity" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-control.webp" alt="AI Control" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-ask.webp" alt="Ask AURA welcome" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-answer.webp" alt="Ask AURA answer" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-voice.webp" alt="Voice" loading="lazy"></div>
+        <div class="phone"><img src="assets/m-upgrade.webp" alt="Autonomy upgrade" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 USABILITY TESTING ============ -->
+<section class="sec wrap" id="testing">
+  <div class="head"><span class="eyebrow"><b>08</b>Usability testing</span><h2>Usability test — Round 1</h2><p class="sub">9 participants · 5 tasks · unmoderated Maze test · Figma prototype, no guidance</p></div>
+  <div class="body nums">
+    <div class="num"><b><span data-count="9">9</span><sup>/9</sup></b><p>completed the AI recommendation flow without assistance</p></div>
+    <div class="num"><b><span data-count="9">9</span><sup>/9</sup></b><p>confirmed the action in the approval sheet — AI could not act without approval</p></div>
+    <div class="num"><b><span data-count="8">8</span><sup>/9</sup></b><p>configured crypto to “Always ask”</p></div>
+    <div class="num quote"><b>“The additional AI chat popup is confusing.”</b><p>contextual AI was clearer than the extra Ask AURA sheet</p></div>
+  </div>
+  <div class="body">
+    <div class="list tasks">
+      <div class="th"><span></span><span>Tasks</span><span>Success</span><span>Avg. time</span><span>Misclicks</span></div>
+      <div><span class="n">1</span><p>Extra money this month: find what AURA recommends and decide whether to follow it</p><span data-l="Success">9/9</span><span data-l="Avg. time">15.8 s</span><span data-l="Misclicks">30.2%</span></div>
+      <div><span class="n">2</span><p>Allow automatic savings under €200; never let AI buy crypto without asking</p><span data-l="Success">8/9</span><span data-l="Avg. time">10.9 s</span><span data-l="Misclicks">27.1%</span></div>
+      <div><span class="n">3</span><p>Find out why your crypto portfolio became riskier this month</p><span data-l="Success">9/9</span><span data-l="Avg. time">6.8 s</span><span data-l="Misclicks">12.5%</span></div>
+      <div><span class="n">4</span><p>Ask AURA where your money went this month</p><span data-l="Success">9/9</span><span data-l="Avg. time">5.6 s</span><span data-l="Misclicks">17.4%</span></div>
+      <div><span class="n">5</span><p>By voice: move unused cash to savings, keep €300 available</p><span data-l="Success">9/9</span><span data-l="Avg. time">5.6 s</span><span data-l="Misclicks">34.5%</span></div>
+    </div>
+    <p class="note">Misclicks were analysed task by task and fixed in the mockups, see <a href="#iterations">09 Iterations</a> below.</p>
+</div>
+  <div class="body">
+    <!-- VIDEO SLOT · Maze recording: replace <img> with <video controls poster="assets/maze-report.webp" src="assets/maze-recording.mp4"> -->
+    <figure class="frame frame--video"><img src="assets/maze-report.webp" width="1400" height="776" alt="Maze report for the AURA prototype usability test" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ============ 12 ITERATIONS (pinned, 3 steps) ============ -->
+<section class="sec pin" id="iterations" style="--n:3">
+  <div class="pin-track">
+    <div class="pin-sticky wrap">
+      <div class="head"><span class="eyebrow"><b>09</b>Iterations</span><h2>Turning test insights into product decisions.</h2></div>
+      <div class="pin-list">
+        <article class="pin-item is-active">
+          <div class="copy">
+            <span class="step">01</span>
+            <h3 class="xl">Recommendation flow <span class="ar">→</span> decision flow</h3>
+            <p class="desc">Key information and the action combined in one flow.</p>
+            <dl class="facts">
+              <div><dt>Test signal</dt><dd><div class="pair"><span><b>15.8 s</b>to complete Task 1</span><span><b>30.2%</b>misclicks</span></div></dd></div>
+              <div><dt>What I changed</dt><dd>Why, impact, allocation and Approve in one sheet. No extra screens in between.</dd></div>
+              <div><dt>Expected impact</dt><dd><span>↓ Time to action</span><span>↑ Insight → Action conversion</span></dd></div>
+            </dl>
+          </div>
+          <div class="stage"><div class="ba">
+            <figure><img src="assets/it1-before.webp" width="515" height="1120" alt="Before: recommendation screen" loading="lazy"><figcaption>Before</figcaption></figure>
+            <span class="arrow" aria-hidden="true"><svg viewBox="0 0 54 30"><path d="M6 5l10 10L6 25"/><path d="M22 5l10 10-10 10"/><path d="M38 5l10 10-10 10"/></svg></span>
+            <figure><img src="assets/it1-after.webp" width="515" height="1120" alt="After: single decision sheet" loading="lazy"><figcaption>After</figcaption></figure>
+          </div></div>
+        </article>
+        <article class="pin-item">
+          <div class="copy">
+            <span class="step">02</span>
+            <h3 class="xl">Global AI settings <span class="ar">→</span> risk-based permissions</h3>
+            <p class="desc">Clear control with different rules per asset type.</p>
+            <dl class="facts">
+              <div><dt>Test signal</dt><dd><div class="pair"><span><b>8/9</b>completed Task 2, the only drop-off in the test</span></div></dd></div>
+              <div><dt>What I changed</dt><dd>Separate rules for Savings, Investments and Crypto. Autonomy level and limits in one Control center.</dd></div>
+              <div><dt>Expected impact</dt><dd><span>↑ Perceived control</span><span>↑ Automation adoption</span></dd></div>
+            </dl>
+          </div>
+          <div class="stage"><div class="ba">
+            <figure><img src="assets/it2-before.webp" width="515" height="1120" alt="Before: global autonomy level" loading="lazy"><figcaption>Before</figcaption></figure>
+            <span class="arrow" aria-hidden="true"><svg viewBox="0 0 54 30"><path d="M6 5l10 10L6 25"/><path d="M22 5l10 10-10 10"/><path d="M38 5l10 10-10 10"/></svg></span>
+            <figure><img src="assets/it2-after.webp" width="515" height="1120" alt="After: rules by asset" loading="lazy"><figcaption>After</figcaption></figure>
+          </div></div>
+        </article>
+        <article class="pin-item">
+          <div class="copy">
+            <span class="step">03</span>
+            <h3 class="xl">Manual approval <span class="ar">→</span> progressive automation</h3>
+            <p class="desc">Repeated approvals turn into automation with limits.</p>
+            <dl class="facts">
+              <div><dt>Test signal</dt><dd>“Repeated approvals take a lot of time.”</dd></div>
+              <div><dt>What I changed</dt><dd>After repeated approvals, AURA offers automation with a limit the user sets.</dd></div>
+              <div><dt>Expected impact</dt><dd><span>↑ Repeat usage</span><span>↑ Automation conversion</span></dd></div>
+            </dl>
+          </div>
+          <div class="stage"><div class="ba">
+            <figure><img src="assets/it3-before.webp" width="515" height="1120" alt="Before: transfer completed" loading="lazy"><figcaption>Before</figcaption></figure>
+            <span class="arrow" aria-hidden="true"><svg viewBox="0 0 54 30"><path d="M6 5l10 10L6 25"/><path d="M22 5l10 10-10 10"/><path d="M38 5l10 10-10 10"/></svg></span>
+            <figure><img src="assets/it3-after.webp" width="515" height="1120" alt="After: automate similar transfers" loading="lazy"><figcaption>After</figcaption></figure>
+          </div></div>
+        </article>
+        <div class="pager" role="group" aria-label="Iteration">
+          <button type="button" aria-label="Iteration 1" aria-current="true"></button>
+          <button type="button" aria-label="Iteration 2"></button>
+          <button type="button" aria-label="Iteration 3"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 CONSTRAINTS, OUTCOME & LEARNINGS ============ -->
+<section class="sec wrap" id="outcome">
+  <div class="head"><span class="eyebrow"><b>10</b>Constraints, outcome &amp; learnings</span><h2>From an AI chatbot to a controlled financial agent</h2></div>
+  <div class="orows">
+    <div class="orow">
+      <h3 class="big">Constraints</h3>
+      <div>
+        <div class="tiles n4 limits">
+          <div class="tile"><svg class="i"><use href="#i-scale"/></svg><h3>Trust vs automation</h3><p>More automation adds convenience but can reduce perceived control.</p></div>
+          <div class="tile"><svg class="i"><use href="#i-layers"/></svg><h3>Explainability vs load</h3><p>Every detail builds transparency but overwhelms simple actions.</p></div>
+          <div class="tile"><svg class="i"><use href="#i-gauge"/></svg><h3>Different risk levels</h3><p>A €20 subscription and a €2,000 crypto trade can't share one approval model.</p></div>
+          <div class="tile"><svg class="i"><use href="#i-help"/></svg><h3>AI uncertainty</h3><p>Not deterministic truth: reasoning, editable actions, explicit confirmation.</p></div>
+        </div>
+        <p class="muted" style="margin-top:14px;font-size:var(--t-sm)"><span class="strong">Scope.</span> I deliberately limited v1 to cash management, investments and crypto — not loans, credit, tax or insurance.</p>
+      </div>
+    </div>
+    <div class="orow">
+      <h3 class="big">Outcome</h3>
+      <div class="tiles n3 wins">
+        <div class="tile"><svg class="i"><use href="#i-spark"/></svg><p class="xl">Proactive</p><p>Discovers opportunities instead of waiting for prompts.</p></div>
+        <div class="tile"><svg class="i"><use href="#i-eye"/></svg><p class="xl">Explainable</p><p>Users see why before committing.</p></div>
+        <div class="tile"><svg class="i"><use href="#i-sliders"/></svg><p class="xl">Controllable</p><p>Users decide what AI can suggest, prepare, automate.</p></div>
+      </div>
+    </div>
+    <div class="orow">
+      <h3 class="big">What I learned</h3>
+      <div class="tiles n3 learned">
+        <div><svg class="i"><use href="#i-shield"/></svg><h3>Trust is not a single product metric.</h3><p>Users trust AI to analyse their finances long before they trust it to move money.</p></div>
+        <div><svg class="i"><use href="#i-repeat"/></svg><h3>Automation should be progressive.</h3><p>Repeated approvals are a stronger moment than broad permissions upfront.</p></div>
+        <div><svg class="i"><use href="#i-layers"/></svg><h3>AI should have one mental model.</h3><p>One contextual workspace removed duplicated flows and clarified what AURA is.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="end"></div>
+</main>
+<!-- NEXT CASE + SITE FOOTER go here -->
+<script src="js/aura-case.js"></script>
+</body>
+</html>
