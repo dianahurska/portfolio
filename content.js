@@ -42,15 +42,15 @@ window.SITE = {
   },
 
   footerSocials: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/diana-hurska-design/" },
     { label: "Behance", url: "https://www.behance.net/d8db8e80" },
-    { label: "Telegram", url: "https://t.me/dianagurska" },
-    { label: "Linkedin", url: "https://www.linkedin.com/in/diana-hurska-design/" }
+    { label: "Telegram", url: "https://t.me/dianagurska" }
   ],
 
   socials: [
+    { label: "LinkedIn", handle: "Diana Hurska", url: "https://www.linkedin.com/in/diana-hurska-design/" },
     { label: "Behance", handle: "Diana Hurska", url: "https://www.behance.net/d8db8e80" },
-    { label: "Telegram", handle: "@dianagurska", url: "https://t.me/dianagurska" },
-    { label: "Linkedin", handle: "Diana Hurska", url: "https://www.linkedin.com/in/diana-hurska-design/" }
+    { label: "Telegram", handle: "@dianagurska", url: "https://t.me/dianagurska" }
   ],
   showElsewhere: false,
 

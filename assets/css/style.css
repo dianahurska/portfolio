@@ -62,7 +62,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .nav .at { display: none; font-size: 20px; font-weight: 600; color: #fff; }
 
 /* ---------- Home ---------- */
-.home { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 0 80px; padding: 84px var(--gutter) 0; }
+.home { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 0 80px; padding: 84px var(--gutter) clamp(96px, 12vw, 180px); }
 .home-side { position: relative; }
 .home-side .sticky {
   position: sticky; top: 84px;
