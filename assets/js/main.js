@@ -127,13 +127,13 @@
         </div>
       </div></section>` : ""}
 
-      <section class="section elsewhere"><div class="section-inner">
+      ${S.showElsewhere !== false ? `<section class="section elsewhere"><div class="section-inner">
         <h2 class="section-title">Elsewhere</h2>
         ${S.socials.map((s) => `
           <a class="social-row reveal" href="${esc(s.url)}" target="_blank" rel="noopener">
             <span class="lbl">${esc(s.label)}</span><span class="hdl">${esc(s.handle)}</span>
           </a>`).join("")}
-      </div></section>`;
+      </div></section>` : ""}`;
 
     // Numbers: rolling digits
     S.numbers && document.querySelectorAll(".num .val").forEach((el, i) => {

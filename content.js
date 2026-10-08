@@ -52,6 +52,7 @@ window.SITE = {
     { label: "Telegram", handle: "@dianagurska", url: "https://t.me/dianagurska" },
     { label: "Linkedin", handle: "Diana Hurska", url: "https://www.linkedin.com/in/diana-hurska-design/" }
   ],
+  showElsewhere: false,
 
   // Проєкти: показуються на головній (картки справа) і мають власну сторінку project.html?p=<slug>
   projects: [
@@ -129,37 +130,15 @@ window.SITE = {
   ],
 
   // Блок "Recent" з відео. video — шлях до .mp4 (або "" щоб показати тільки картинку poster)
-  recent: {
-    title: "Recent — Promo for Brand",
-    tags: ["3D", "Branding", "Assets"],
-    url: "https://example.com",
-    video: "",
-    poster: "assets/images/recent-poster.svg"
-  },
+  recent: null,
 
   // logo — шлях до маленької іконки (svg/png), або "" — тоді буде кружечок з першою літерою
-  timeline: [
-    { year: "2016", company: "Company One", roles: "UX, product design", logo: "" },
-    { year: "2020", company: "Company Two", roles: "3D, art direction", logo: "" },
-    { year: "2022", company: "Company Three", roles: "UI, UX, 3D", logo: "" },
-    { year: "2023", company: "Company Four", roles: "3D, video production", logo: "" },
-    { year: "Current", company: "Company Five", roles: "UI, product design", logo: "", current: true }
-  ],
+  timeline: [],
 
-  numbers: [
-    { value: 98, suffix: "%", label: "Customer satisfaction" },
-    { value: 120, suffix: "+", label: "Projects completed" },
-    { value: 12, suffix: "", label: "Design awards" }
-  ],
+  numbers: [],
 
   // wide: true — картка на дві колонки. icon — шлях до іконки або "" (буде літера)
-  stack: [
-    { name: "Figma", desc: "UI, Brainstorming", url: "https://www.figma.com", icon: "", wide: true },
-    { name: "Framer", desc: "Web development", url: "https://www.framer.com", icon: "" },
-    { name: "Slack", desc: "Communication", url: "https://slack.com", icon: "" },
-    { name: "Zoom", desc: "Client bookings", url: "https://zoom.us", icon: "" },
-    { name: "Cinema 4D", desc: "3D work", url: "https://www.maxon.net/cinema-4d", icon: "", wide: true }
-  ],
+  stack: [],
 
   about: {
     label: "I am",
@@ -176,7 +155,7 @@ window.SITE = {
 };
 
 // Imported portfolio pages. Original project definitions above remain available.
-window.SITE.homeProjects = ["aura", "car-rental", "pet-shop", "project-four"];
+window.SITE.homeProjects = ["aura", "car-rental", "pet-shop"];
 window.SITE.workTitle = "Selected Work";
 window.SITE.workLabels = { client: "Client", services: "Services", year: "Year" };
 window.SITE.workProjects = [
@@ -214,66 +193,6 @@ window.SITE.workProjects = [
     "href": "project.html?p=pet-shop",
     "sourceImage": "https://framerusercontent.com/images/CgSVXkZqAJ38SqLaSxiqCxCu1M.png",
     "slug": "pet-shop"
-  },
-  {
-    "title": "RETALEYE",
-    "client": "Retailvision",
-    "services": "Web design, 3D",
-    "year": "2024",
-    "cover": "assets/images/work/retaileye.png",
-    "href": "https://dianahurska.framer.website/work/retaileye",
-    "sourceImage": "https://framerusercontent.com/images/sNEg3DXRC4D8UPWu2Yq9fb6QGsA.png",
-    "slug": "retaileye"
-  },
-  {
-    "title": "IKEA",
-    "client": "IKEA",
-    "services": "Web design & dev, 3D",
-    "year": "2022",
-    "cover": "assets/images/work/ikea.jpeg",
-    "href": "https://dianahurska.framer.website/work/ikea",
-    "sourceImage": "https://framerusercontent.com/images/Bew6IoasOdfyrsRFbURfpxQMVP0.jpeg",
-    "slug": "ikea"
-  },
-  {
-    "title": "RADIOWATCH",
-    "client": "Spenter",
-    "services": "UI, UX, Product design, 3D",
-    "year": "2024",
-    "cover": "assets/images/work/radiowatch.jpg",
-    "href": "https://dianahurska.framer.website/work/radiowatch",
-    "sourceImage": "https://framerusercontent.com/images/Flx46usgOBAfVNrwBmduA8J9e8.jpg",
-    "slug": "radiowatch"
-  },
-  {
-    "title": "VINYL",
-    "client": "SpinVault",
-    "services": "3D Renders",
-    "year": "2021",
-    "cover": "assets/images/work/vinyl.png",
-    "href": "https://dianahurska.framer.website/work/vinyl",
-    "sourceImage": "https://framerusercontent.com/images/qM7QTXMMetIqEY2FJ4HqsmKBhxE.png",
-    "slug": "vinyl"
-  },
-  {
-    "title": "UI Lens",
-    "client": "Voicu Apostol",
-    "services": "Web design, development",
-    "year": "2023",
-    "cover": "assets/images/work/ui-lens.jpg",
-    "href": "https://dianahurska.framer.website/work/uilens",
-    "sourceImage": "https://framerusercontent.com/images/MFzfvah4LW5T19EZz3LH8z6eHt4.jpg",
-    "slug": "uilens"
-  },
-  {
-    "title": "Eleveight Studio",
-    "client": "Fabian Albert",
-    "services": "Web design, development",
-    "year": "2023",
-    "cover": "assets/images/work/eleveight-studio.png",
-    "href": "https://dianahurska.framer.website/work/eleveight-studio",
-    "sourceImage": "https://framerusercontent.com/images/Uwt2wACVnO6AzuhCuj3JwPso.png",
-    "slug": "eleveight-studio"
   }
 ];
 window.SITE.projects.push(...[
