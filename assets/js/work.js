@@ -4,21 +4,23 @@
   window.renderWork = function () {
     const site = window.SITE;
     const labels = site.workLabels;
-    const arrow = '<svg viewBox="0 0 26 26" aria-hidden="true"><path d="M7 19 19 7M7 7h12v12" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+    const arrow = '<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M6.69 11.88H5.19v-9L1.065 7.005 0 5.94 5.94 0l5.94 5.94-1.065 1.065L6.69 2.88Z" transform="translate(3.06 3.12) rotate(45 5.94 5.94)" fill="currentColor"/></svg>';
     document.querySelector("#app").innerHTML = `
       <section class="work-page" aria-labelledby="work-title">
         <h1 id="work-title" class="work-title work-reveal">${escape(site.workTitle)}</h1>
         <div class="work-list">
           ${site.workProjects.map((project, index) => `
-            <a class="work-card work-reveal" href="${escape(project.href)}" aria-label="${escape(project.title)}">
+            <a class="work-card work-reveal${project.details ? " work-card--details" : ""}" href="${escape(project.href)}" aria-label="${escape(project.title)}">
               <div class="work-image"><img src="${escape(project.cover)}" alt="${escape(project.title)}" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></div>
               <div class="work-info">
                 <h2>${escape(project.title)}</h2>
-                <span class="work-arrow">${arrow}</span>
+                <span class="work-arrow" aria-hidden="true">${arrow}</span>
                 <dl class="work-details">
-                  <div class="work-detail work-client"><dt>${escape(project.labels?.client || labels.client)}</dt><dd>${escape(project.client)}</dd></div>
-                  <div class="work-detail work-service"><dt>${escape(project.labels?.services || labels.services)}</dt><dd>${escape(project.services)}</dd></div>
-                  <div class="work-detail work-year"><dt>${escape(labels.year)}</dt><dd>${escape(project.year)}</dd></div>
+                  ${(project.details || [
+                    { label: project.labels?.client || labels.client, value: project.client, className: "work-client" },
+                    { label: project.labels?.services || labels.services, value: project.services, className: "work-service" },
+                    { label: labels.year, value: project.year, className: "work-year" }
+                  ]).map((detail) => `<div class="work-detail ${escape(detail.className || "")}"><dt>${escape(detail.label)}</dt><dd>${escape(detail.value)}</dd></div>`).join("")}
                 </dl>
               </div>
             </a>`).join("")}

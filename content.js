@@ -183,18 +183,21 @@ window.SITE.workProjects = [
   {
     slug: "aura",
     title: "AURA — AI Financial Agent",
-    client: "Product Designer",
-    services: "Trust, control & progressive automation",
-    labels: { client: "Role", services: "Focus" },
-    year: "2026",
+    details: [
+      { label: "Goal", value: "Build trust in AI-driven financial actions" },
+      { label: "Experience", value: "Explainable decisions, approvals & progressive automation" },
+      { label: "Platform", value: "Mobile app + Web dashboard" }
+    ],
     cover: "assets/images/aura/hero-laptop.webp",
     href: "project.html?p=aura"
   },
   {
     "title": "Rental Car App",
-    "client": "UX/UI Designer",
-    "services": "End-to-end car rental experience",
-    "year": "",
+    details: [
+      { label: "Goal", value: "Reduce friction from car discovery to active rental" },
+      { label: "Experience", value: "Search, booking, navigation & trip management" },
+      { label: "Platform", value: "Mobile app" }
+    ],
     "cover": "assets/images/car-rental/01.png",
     "href": "project.html?p=car-rental",
     "sourceImage": "https://framerusercontent.com/images/DXnQiDPloW0iKJVWZNr0q7FTm0.png",
@@ -202,9 +205,11 @@ window.SITE.workProjects = [
   },
   {
     "title": "Happy Tails — Pet E-commerce",
-    "client": "UX/UI Designer",
-    "services": "Simplify product discovery & checkout",
-    "year": "End-to-end commerce experience",
+    details: [
+      { label: "Goal", value: "Simplify the path from browsing to purchase" },
+      { label: "Experience", value: "Product discovery, navigation & checkout" },
+      { label: "Platform", value: "Responsive e-commerce · Desktop + Mobile" }
+    ],
     "cover": "assets/images/work/pet-shop.png",
     "href": "project.html?p=pet-shop",
     "sourceImage": "https://framerusercontent.com/images/CgSVXkZqAJ38SqLaSxiqCxCu1M.png",

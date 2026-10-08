@@ -3,6 +3,7 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const arrow = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 9 9 1M3 1h6v6"/></svg>';
+  const cardArrow = '<svg viewBox="0 0 18 18"><path d="M6.69 11.88H5.19v-9L1.065 7.005 0 5.94 5.94 0l5.94 5.94-1.065 1.065L6.69 2.88Z" transform="translate(3.06 3.12) rotate(45 5.94 5.94)" fill="currentColor"/></svg>';
   const page = document.body.dataset.page;
 
   /* ---------- Shared: header + footer ---------- */
@@ -70,7 +71,7 @@
           ${(S.homeProjects ? S.homeProjects.map((slug) => S.projects.find((p) => p.slug === slug)) : S.projects).map((p) => `
             <a class="project-card" href="project.html?p=${encodeURIComponent(p.slug)}">
               <img src="${esc(p.cover)}" alt="${esc(p.title)}" loading="lazy">
-              <div class="info"><h3>${esc(p.title)}</h3><p><span>${esc(p.servicesLabel || "Services")}:</span> ${esc(p.services)}</p></div>
+              <div class="info"><h3>${esc(p.title)}</h3><p><span>${esc(p.servicesLabel || "Services")}:</span> ${esc(p.services)}</p><span class="card-arrow" aria-hidden="true">${cardArrow}</span></div>
             </a>`).join("")}
         </div>
       </section>

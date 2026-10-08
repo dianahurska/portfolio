@@ -91,7 +91,10 @@ button, input, textarea { font: inherit; color: inherit; }
   background: linear-gradient(transparent, rgba(0, 0, 0, .55));
   opacity: 0; transform: translateY(10px); transition: opacity .35s, transform .35s;
 }
-.project-card:hover .info { opacity: 1; transform: none; }
+.project-card:hover .info, .project-card:focus-visible .info { opacity: 1; transform: none; }
+.project-card .card-arrow { flex: none; width: 18px; height: 18px; color: #c2c2c2; opacity: 0; transform: translate(-3px, 3px); transition: opacity .35s, transform .35s; }
+.project-card .card-arrow svg { display: block; width: 100%; height: 100%; }
+.project-card:hover .card-arrow, .project-card:focus-visible .card-arrow { opacity: 1; transform: none; }
 .project-card .info h3 { font-size: 18px; font-weight: 600; line-height: 1; letter-spacing: var(--tight); color: #fafafa; }
 .project-card .info p { font-size: 14px; font-weight: 500; line-height: 1; letter-spacing: var(--tight); color: #ebebeb; }
 .project-card .info p span { font-weight: 400; color: #949494; }
@@ -278,6 +281,7 @@ button, input, textarea { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .num { opacity: 1; transform: none; transition: none; }
   .digit > span { transition: none; }
+  .project-card .info, .project-card .card-arrow { transition: none; }
   .marquee-track { animation: none; }
   html { scroll-behavior: auto; }
 }
@@ -325,6 +329,7 @@ button, input, textarea { font: inherit; color: inherit; }
   .projects::-webkit-scrollbar { display: none; }
   .project-card { flex: 0 0 88%; scroll-snap-align: start; }
   .project-card .info { opacity: 1; transform: none; padding: 16px; }
+  .project-card .card-arrow { opacity: 1; transform: none; }
   .home-side { display: contents; }
 
   .recent { padding-top: 60px; }
