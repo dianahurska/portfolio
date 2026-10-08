@@ -62,7 +62,7 @@
           <section class="core-skills" aria-labelledby="core-skills-title">
             <h2 id="core-skills-title">${esc(S.coreSkills.title)}</h2>
             ${S.coreSkills.groups.map((group) => `<div class="core-skills-group">
-              <h3>${esc(group.title)}</h3>
+              ${group.title ? `<h3>${esc(group.title)}</h3>` : ""}
               <ul>${group.items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
             </div>`).join("")}
           </section>

@@ -20,28 +20,13 @@ window.SITE = {
     title: "CORE SKILLS",
     groups: [
       {
-        title: "Product & UX",
         items: [
-          "Product Discovery",
-          "UX Strategy",
-          "Information Architecture",
-          "Cross-platform UX",
+          "Product Strategy",
+          "UX Research",
+          "Interaction Design",
+          "AI Product Design",
           "Product Analytics",
-          "A/B Testing",
-          "Cross-functional Collaboration"
-        ]
-      },
-      {
-        title: "Design & AI Tools",
-        items: [
-          "AI-assisted Research",
-          "Prototyping",
-          "Figma",
-          "Design Systems",
-          "Google Analytics",
-          "Hotjar",
-          "Maze",
-          "Adobe Creative Suite"
+          "Design Systems"
         ]
       }
     ]
