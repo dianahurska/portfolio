@@ -177,6 +177,7 @@ window.SITE = {
 
 // Imported portfolio pages. Original project definitions above remain available.
 window.SITE.homeProjects = ["car-rental", "pet-shop", "project-three", "project-four"];
+window.SITE.homeProjects.unshift("aura");
 window.SITE.workTitle = "Selected Work";
 window.SITE.workLabels = { client: "Client", services: "Services", year: "Year" };
 window.SITE.workProjects = [
@@ -423,3 +424,22 @@ window.SITE.projects.push(...[
     ]
   }
 ]);
+
+// AURA keeps its approved HTML layout instead of flattening it into image panels.
+window.SITE.projects.push({
+  slug: "aura",
+  title: "AURA — AI Financial Agent",
+  services: "Research, Strategy, UX, UI, Prototyping, Testing",
+  cover: "assets/images/aura/hero-laptop.webp",
+  layout: "aura",
+  body: "assets/cases/aura.html"
+});
+window.SITE.workProjects.unshift({
+  slug: "aura",
+  title: "AURA — AI Financial Agent",
+  client: "Product Designer",
+  services: "Research, Strategy, UX, UI, Prototyping, Testing",
+  year: "2026",
+  cover: "assets/images/aura/hero-laptop.webp",
+  href: "project.html?p=aura"
+});

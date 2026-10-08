@@ -222,6 +222,10 @@
     const idx = Math.max(0, S.projects.findIndex((p) => p.slug === slug));
     const P = S.projects[idx];
     document.title = `${P.title} — ${S.name}`;
+    if (P.layout === "aura") {
+      window.renderAuraCase(P);
+      return;
+    }
     if (P.layout === "case-study") {
       window.renderCaseStudy(P);
       return;
