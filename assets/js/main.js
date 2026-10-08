@@ -70,7 +70,7 @@
           ${(S.homeProjects ? S.homeProjects.map((slug) => S.projects.find((p) => p.slug === slug)) : S.projects).map((p) => `
             <a class="project-card" href="project.html?p=${encodeURIComponent(p.slug)}">
               <img src="${esc(p.cover)}" alt="${esc(p.title)}" loading="lazy">
-              <div class="info"><h3>${esc(p.title)}</h3><p><span>Services:</span> ${esc(p.services)}</p></div>
+              <div class="info"><h3>${esc(p.title)}</h3><p><span>${esc(p.servicesLabel || "Services")}:</span> ${esc(p.services)}</p></div>
             </a>`).join("")}
         </div>
       </section>

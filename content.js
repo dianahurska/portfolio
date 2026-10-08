@@ -184,7 +184,8 @@ window.SITE.workProjects = [
     slug: "aura",
     title: "AURA — AI Financial Agent",
     client: "Product Designer",
-    services: "Research, Strategy, UX, UI, Prototyping, Testing",
+    services: "Trust, control & progressive automation",
+    labels: { client: "Role", services: "Focus" },
     year: "2026",
     cover: "assets/images/aura/hero-laptop.webp",
     href: "project.html?p=aura"
@@ -437,7 +438,8 @@ window.SITE.projects.push(...[
 window.SITE.projects.push({
   slug: "aura",
   title: "AURA — AI Financial Agent",
-  services: "Research, Strategy, UX, UI, Prototyping, Testing",
+  servicesLabel: "Challenge",
+  services: "Designing trust, control & progressive autonomy in fintech",
   cover: "assets/images/aura/hero-laptop.webp",
   layout: "aura",
   body: "assets/cases/aura.html"

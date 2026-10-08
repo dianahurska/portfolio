@@ -16,8 +16,8 @@
                 <h2>${escape(project.title)}</h2>
                 <span class="work-arrow">${arrow}</span>
                 <dl class="work-details">
-                  <div class="work-detail work-client"><dt>${escape(labels.client)}</dt><dd>${escape(project.client)}</dd></div>
-                  <div class="work-detail work-service"><dt>${escape(labels.services)}</dt><dd>${escape(project.services)}</dd></div>
+                  <div class="work-detail work-client"><dt>${escape(project.labels?.client || labels.client)}</dt><dd>${escape(project.client)}</dd></div>
+                  <div class="work-detail work-service"><dt>${escape(project.labels?.services || labels.services)}</dt><dd>${escape(project.services)}</dd></div>
                   <div class="work-detail work-year"><dt>${escape(labels.year)}</dt><dd>${escape(project.year)}</dd></div>
                 </dl>
               </div>
