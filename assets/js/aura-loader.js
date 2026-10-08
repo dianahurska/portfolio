@@ -15,7 +15,7 @@
     try {
       const [response] = await Promise.all([
         fetch(project.body),
-        loadAsset("link", { rel: "stylesheet", href: "assets/css/aura-case.css?v=aura-polish" })
+        loadAsset("link", { rel: "stylesheet", href: "assets/css/aura-case.css?v=aura-updates" })
       ]);
       if (!response.ok) throw new Error("Could not load the AURA case page.");
       const source = new DOMParser().parseFromString(await response.text(), "text/html");
@@ -23,8 +23,12 @@
       // Preserve the supplied main and sprite; adapt asset paths for GitHub Pages.
       main.id = "app";
       main.classList.add("aura-case");
-      main.querySelectorAll("img[src]").forEach((img) => {
-        img.setAttribute("src", img.getAttribute("src").replace(/^assets\//, "assets/images/aura/"));
+      main.querySelectorAll("img[src], video, source[src]").forEach((media) => {
+        ["src", "poster"].forEach((attribute) => {
+          if (media.hasAttribute(attribute)) {
+            media.setAttribute(attribute, media.getAttribute(attribute).replace(/^assets\//, "assets/images/aura/"));
+          }
+        });
       });
       const sprite = source.querySelector("body > svg");
       app.before(sprite);
@@ -34,7 +38,7 @@
       next.className = "case-study case-next";
       main.after(next);
       window.appendCaseProjects(next, project);
-      await loadAsset("script", { src: "assets/js/aura-case.js?v=aura-polish" });
+      await loadAsset("script", { src: "assets/js/aura-case.js?v=aura-updates" });
       document.dispatchEvent(new Event("aura:ready"));
     } catch (error) {
       const target = document.querySelector("#app");

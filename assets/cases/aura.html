@@ -189,22 +189,31 @@
 
 <!-- ============ 07 CONCEPT & WIREFRAME ============ -->
 <section class="sec wrap" id="concept">
-  <div class="head"><span class="eyebrow"><b>05</b>Concept &amp; wireframe</span><h2>Concepts</h2></div>
-  <div class="body cols t5" style="align-items:center">
-    <div>
+  <div class="head"><span class="eyebrow"><b>05</b>Concept &amp; wireframe</span></div>
+  <div class="body cw">
+    <div class="cw-col">
+      <div class="colh"><div><h2>Concepts</h2><p>3 directions for the AI’s role</p></div></div>
+      <div class="concepts">
       <div class="concept"><span class="n">01</span><div><h3>Chat-first AI</h3><p>Ask AURA → type question → answer</p><p class="why">Required users to know what to ask and hid proactive value.</p></div></div>
       <div class="concept"><span class="n">02</span><div><h3>Insight-first AI</h3><p>Detects opportunity → explains → action</p><p class="why">AURA became proactive instead of reactive.</p></div></div>
       <div class="concept chosen"><span class="n">03</span><div><h3>Controlled autonomy<span class="badge"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4l3 3 6-6.6"/></svg>Chosen</span></h3><p>Suggest → Ask before acting → Automatic within limits</p><p class="why">Automation became a spectrum, not an on/off permission.</p></div></div>
+      </div>
     </div>
-    <!-- VIDEO SLOT · wireframes: replace <img> with the wireframes video -->
-    <figure class="frame"><img src="assets/wireframe.webp" width="1395" height="993" alt="Low-fidelity wireframe of the AURA desktop overview" loading="lazy"></figure>
+    <div class="cw-col wf">
+      <div class="colh"><div><h2>Wireframes</h2><p>Low-fidelity · chosen concept</p></div>
+        <div class="seg" role="group" aria-label="Device"><button type="button" data-device="mobile" aria-pressed="true">Mobile</button><button type="button" data-device="desktop" aria-pressed="false">Desktop</button></div></div>
+      <div class="stage stage--video">
+        <video class="pv" data-set="mobile" data-auto src="assets/wire-mobile.mp4" poster="assets/wire-mobile.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Mobile wireframes walkthrough"></video>
+        <video class="pv" data-set="desktop" data-auto src="assets/wire-desktop.mp4" poster="assets/wire-desktop.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Desktop wireframes walkthrough"></video>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ 08 INFORMATION ARCHITECTURE ============ -->
 <section class="sec wrap" id="ia">
   <div class="head"><span class="eyebrow"><b>06</b>Information architecture</span></div>
-  <div class="body tree" role="img" aria-label="Information architecture: Home branches into Assets (Cash, Investments, Crypto), AI (Insights, Chat, Voice), Activity (Transactions, AI actions) and Control (Autonomy, Permissions, Limits)">
+  <div class="body tree-scroll"><div class="tree" role="img" aria-label="Information architecture: Home branches into Assets (Cash, Investments, Crypto), AI (Insights, Chat, Voice), Activity (Transactions, AI actions) and Control (Autonomy, Permissions, Limits)">
     <div class="tree-root"><span class="node root">Home</span></div>
     <div class="branches">
       <div class="branch" style="--n:3"><span class="node">Assets</span><ul><li><span class="node leaf">Cash</span></li><li><span class="node leaf">Investments</span></li><li><span class="node leaf">Crypto</span></li></ul></div>
@@ -212,7 +221,7 @@
       <div class="branch" style="--n:2"><span class="node">Activity</span><ul><li><span class="node leaf">Transactions</span></li><li><span class="node leaf">AI actions</span></li></ul></div>
       <div class="branch" style="--n:3"><span class="node">Control</span><ul><li><span class="node leaf">Autonomy</span></li><li><span class="node leaf">Permissions</span></li><li><span class="node leaf">Limits</span></li></ul></div>
     </div>
-  </div>
+  </div></div>
 </section>
 
 <!-- ============ 08 CORE EXPERIENCE (pinned, 3 flows) ============ -->
@@ -229,21 +238,11 @@
               <div><dt>Value:</dt><dd>Faster decisions with full control.</dd></div>
             </dl>
           </div>
-          <!-- PROTOTYPE SLOT · flow 1: swap the screen sequence for the recorded prototype -->
-          <div class="stage">
+          <div class="stage-wrap">
             <div class="seg" role="group" aria-label="Device"><button type="button" data-device="mobile" aria-pressed="true">Mobile</button><button type="button" data-device="desktop" aria-pressed="false">Desktop</button></div>
-            <div class="device">
-              <div class="shots" data-set="mobile">
-                <img class="on" src="assets/m-home.webp" alt="Home with AURA insight" loading="lazy">
-                <img src="assets/m-insights.webp" alt="AI Insights feed" loading="lazy">
-                <img src="assets/m-recommendation.webp" alt="Recommendation" loading="lazy">
-                <img src="assets/m-approval.webp" alt="Review AI action sheet" loading="lazy">
-                <img src="assets/m-success.webp" alt="Transfer completed" loading="lazy">
-              </div>
-              <div class="shots" data-set="desktop">
-                <img class="on" src="assets/d-overview.webp" alt="Desktop financial overview" loading="lazy">
-                <img src="assets/d-portfolio.webp" alt="Desktop portfolio analytics" loading="lazy">
-              </div>
+            <div class="stage stage--video">
+              <video class="pv" data-set="mobile" data-auto src="assets/flow1-mobile.mp4" poster="assets/flow1-mobile.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Mobile prototype: From insight to confident action"></video>
+              <video class="pv" data-set="desktop" data-auto src="assets/flow1-desktop.mp4" poster="assets/flow1-desktop.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Desktop prototype: From insight to confident action"></video>
             </div>
           </div>
         </article>
@@ -255,19 +254,11 @@
               <div><dt>Value:</dt><dd>More convenience without losing control.</dd></div>
             </dl>
           </div>
-          <!-- PROTOTYPE SLOT · flow 2 -->
-          <div class="stage">
+          <div class="stage-wrap">
             <div class="seg" role="group" aria-label="Device"><button type="button" data-device="mobile" aria-pressed="true">Mobile</button><button type="button" data-device="desktop" aria-pressed="false">Desktop</button></div>
-            <div class="device">
-              <div class="shots" data-set="mobile">
-                <img class="on" src="assets/m-success.webp" alt="Automation suggestion after transfer" loading="lazy">
-                <img src="assets/m-upgrade.webp" alt="Autonomy upgrade" loading="lazy">
-                <img src="assets/m-control.webp" alt="AI Control" loading="lazy">
-                <img src="assets/m-activity.webp" alt="AI Activity" loading="lazy">
-              </div>
-              <div class="shots" data-set="desktop">
-                <img class="on" src="assets/d-control.webp" alt="Desktop AI automation center" loading="lazy">
-              </div>
+            <div class="stage stage--video">
+              <video class="pv" data-set="mobile" data-auto src="assets/flow2-mobile.mp4" poster="assets/flow2-mobile.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Mobile prototype: Automation that earns trust"></video>
+              <video class="pv" data-set="desktop" data-auto src="assets/flow2-desktop.mp4" poster="assets/flow2-desktop.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Desktop prototype: Automation that earns trust"></video>
             </div>
           </div>
         </article>
@@ -279,18 +270,11 @@
               <div><dt>Value:</dt><dd>Faster access to financial answers and actions.</dd></div>
             </dl>
           </div>
-          <!-- PROTOTYPE SLOT · flow 3 -->
-          <div class="stage">
+          <div class="stage-wrap">
             <div class="seg" role="group" aria-label="Device"><button type="button" data-device="mobile" aria-pressed="true">Mobile</button><button type="button" data-device="desktop" aria-pressed="false">Desktop</button></div>
-            <div class="device">
-              <div class="shots" data-set="mobile">
-                <img class="on" src="assets/m-ask.webp" alt="Ask AURA welcome" loading="lazy">
-                <img src="assets/m-answer.webp" alt="Ask AURA answer" loading="lazy">
-                <img src="assets/m-voice.webp" alt="Voice" loading="lazy">
-              </div>
-              <div class="shots" data-set="desktop">
-                <img class="on" src="assets/d-ask.webp" alt="Desktop Ask AURA panel" loading="lazy">
-              </div>
+            <div class="stage stage--video">
+              <video class="pv" data-set="mobile" data-auto src="assets/flow3-mobile.mp4" poster="assets/flow3-mobile.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Mobile prototype: Ask naturally. Act faster."></video>
+              <video class="pv" data-set="desktop" data-auto src="assets/flow3-desktop.mp4" poster="assets/flow3-desktop.webp" width="1920" height="1426" muted loop playsinline preload="none" aria-label="Desktop prototype: Ask naturally. Act faster."></video>
             </div>
           </div>
         </article>
@@ -309,18 +293,20 @@
   <div class="gallery-sticky">
     <div class="gallery-view" tabindex="0">
       <div class="gallery-row">
-        <div class="phone"><img src="assets/m-home.webp" alt="Home" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-insights.webp" alt="AI Insights" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-recommendation.webp" alt="Recommendation" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-approval.webp" alt="Approval sheet" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-success.webp" alt="Approval success" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-portfolio.webp" alt="Portfolio" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-activity.webp" alt="AI Activity" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-control.webp" alt="AI Control" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-ask.webp" alt="Ask AURA welcome" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-answer.webp" alt="Ask AURA answer" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-voice.webp" alt="Voice" loading="lazy"></div>
-        <div class="phone"><img src="assets/m-upgrade.webp" alt="Autonomy upgrade" loading="lazy"></div>
+        <img class="mock" src="assets/g01.webp" width="672" height="1382" alt="Home" loading="lazy">
+        <img class="mock" src="assets/g02.webp" width="672" height="1382" alt="AI Insights" loading="lazy">
+        <img class="mock" src="assets/g03.webp" width="672" height="1382" alt="Recommendation" loading="lazy">
+        <img class="mock" src="assets/g04.webp" width="672" height="1382" alt="Review AI action" loading="lazy">
+        <img class="mock" src="assets/g05.webp" width="672" height="1382" alt="Transfer completed" loading="lazy">
+        <img class="mock" src="assets/g06.webp" width="672" height="1382" alt="Portfolio" loading="lazy">
+        <img class="mock" src="assets/g07.webp" width="672" height="1382" alt="Activity" loading="lazy">
+        <img class="mock" src="assets/g08.webp" width="672" height="1382" alt="AI Control" loading="lazy">
+        <img class="mock" src="assets/g09.webp" width="672" height="1382" alt="Ask AURA" loading="lazy">
+        <img class="mock" src="assets/g10.webp" width="672" height="1382" alt="Ask AURA answer" loading="lazy">
+        <img class="mock" src="assets/g11.webp" width="672" height="1382" alt="Voice" loading="lazy">
+        <img class="mock" src="assets/g12.webp" width="672" height="1382" alt="Autonomy upgrade" loading="lazy">
+        <img class="mock" src="assets/g13.webp" width="672" height="1382" alt="AI Control by asset" loading="lazy">
+        <img class="mock" src="assets/g14.webp" width="672" height="1382" alt="AI Control" loading="lazy">
       </div>
     </div>
   </div>
@@ -347,8 +333,7 @@
     <p class="note">Misclicks were analysed task by task and fixed in the mockups, see <a href="#iterations">09 Iterations</a> below.</p>
 </div>
   <div class="body">
-    <!-- VIDEO SLOT · Maze recording: replace <img> with <video controls poster="assets/maze-report.webp" src="assets/maze-recording.mp4"> -->
-    <figure class="frame frame--video"><img src="assets/maze-report.webp" width="1400" height="776" alt="Maze report for the AURA prototype usability test" loading="lazy"></figure>
+    <figure class="media-plain"><video data-auto src="assets/maze.mp4" poster="assets/maze.webp" width="1920" height="1064" muted loop playsinline preload="metadata" aria-label="Maze usability test report recording"></video></figure>
   </div>
 </section>
 
@@ -369,11 +354,11 @@
               <div><dt>Expected impact</dt><dd><span>↓ Time to action</span><span>↑ Insight → Action conversion</span></dd></div>
             </dl>
           </div>
-          <div class="stage"><div class="ba">
+          <div class="stage-wrap"><div class="stage stage--ba"><div class="ba">
             <figure><img src="assets/it1-before.webp" width="515" height="1120" alt="Before: recommendation screen" loading="lazy"><figcaption>Before</figcaption></figure>
             <span class="arrow" aria-hidden="true"><svg viewBox="0 0 54 30"><path d="M6 5l10 10L6 25"/><path d="M22 5l10 10-10 10"/><path d="M38 5l10 10-10 10"/></svg></span>
             <figure><img src="assets/it1-after.webp" width="515" height="1120" alt="After: single decision sheet" loading="lazy"><figcaption>After</figcaption></figure>
-          </div></div>
+          </div></div></div>
         </article>
         <article class="pin-item">
           <div class="copy">
@@ -386,11 +371,11 @@
               <div><dt>Expected impact</dt><dd><span>↑ Perceived control</span><span>↑ Automation adoption</span></dd></div>
             </dl>
           </div>
-          <div class="stage"><div class="ba">
+          <div class="stage-wrap"><div class="stage stage--ba"><div class="ba">
             <figure><img src="assets/it2-before.webp" width="515" height="1120" alt="Before: global autonomy level" loading="lazy"><figcaption>Before</figcaption></figure>
             <span class="arrow" aria-hidden="true"><svg viewBox="0 0 54 30"><path d="M6 5l10 10L6 25"/><path d="M22 5l10 10-10 10"/><path d="M38 5l10 10-10 10"/></svg></span>
             <figure><img src="assets/it2-after.webp" width="515" height="1120" alt="After: rules by asset" loading="lazy"><figcaption>After</figcaption></figure>
-          </div></div>
+          </div></div></div>
         </article>
         <article class="pin-item">
           <div class="copy">
@@ -403,11 +388,11 @@
               <div><dt>Expected impact</dt><dd><span>↑ Repeat usage</span><span>↑ Automation conversion</span></dd></div>
             </dl>
           </div>
-          <div class="stage"><div class="ba">
+          <div class="stage-wrap"><div class="stage stage--ba"><div class="ba">
             <figure><img src="assets/it3-before.webp" width="515" height="1120" alt="Before: transfer completed" loading="lazy"><figcaption>Before</figcaption></figure>
             <span class="arrow" aria-hidden="true"><svg viewBox="0 0 54 30"><path d="M6 5l10 10L6 25"/><path d="M22 5l10 10-10 10"/><path d="M38 5l10 10-10 10"/></svg></span>
             <figure><img src="assets/it3-after.webp" width="515" height="1120" alt="After: automate similar transfers" loading="lazy"><figcaption>After</figcaption></figure>
-          </div></div>
+          </div></div></div>
         </article>
         <div class="pager" role="group" aria-label="Iteration">
           <button type="button" aria-label="Iteration 1" aria-current="true"></button>

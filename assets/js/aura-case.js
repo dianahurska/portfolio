@@ -11,16 +11,39 @@
   devBtns.forEach(function(b){ b.addEventListener('click', function(){
     document.body.dataset.device = b.dataset.device;
     devBtns.forEach(function(x){ x.setAttribute('aria-pressed', String(x.dataset.device === b.dataset.device)); });
+    syncVideos();
   }); });
 
-  /* Screen sequences inside each stage (stand-in for prototype recordings) */
-  if (!reduce) setInterval(function(){
-    root.querySelectorAll('.shots').forEach(function(s){
-      var imgs = s.querySelectorAll('img'); if (imgs.length < 2 || !s.offsetParent) return;
-      var i = [].findIndex.call(imgs, function(im){ return im.classList.contains('on'); });
-      imgs[i].classList.remove('on'); imgs[(i + 1) % imgs.length].classList.add('on');
+  /* Play only visible recordings; reduced motion keeps manual playback. */
+  var videos = root.querySelectorAll('video[data-auto]');
+  if (reduce) videos.forEach(function(v){ v.removeAttribute('autoplay'); v.controls = true; });
+  var syncVideos = function(){
+    videos.forEach(function(v){
+      var r = v.getBoundingClientRect(), item = v.closest('.pin-item'), pin = v.closest('.pin');
+      var shown = v.offsetParent && r.bottom > 0 && r.top < innerHeight &&
+        (!pin || !pin.classList.contains('is-pinned') || item.classList.contains('is-active'));
+      if (!reduce && !document.hidden && shown) {
+        if (v.paused) { var playing = v.play(); if (playing) playing.catch(function(){}); }
+      } else if (!reduce || !shown || document.hidden) v.pause();
     });
-  }, 2400);
+  };
+
+  /* Fit IA only while leaf text stays readable; otherwise centre its swipe area. */
+  var centreTree = function(){ root.querySelectorAll('.tree-scroll').forEach(function(t){
+    var tree = t.querySelector('.tree'); tree.style.transform = ''; t.style.height = ''; t.classList.remove('is-fit');
+    var cs = getComputedStyle(t), avail = t.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    var natural = tree.scrollWidth, ratio = avail / natural;
+    if (ratio >= 1) { t.classList.remove('is-over'); t.scrollLeft = 0; return; }
+    var leaf = parseFloat(getComputedStyle(tree.querySelector('.node.leaf')).fontSize);
+    if (ratio * leaf >= 10.5) {
+      t.classList.remove('is-over'); t.classList.add('is-fit');
+      tree.style.transform = 'scale(' + ratio + ')';
+      t.style.height = (tree.offsetHeight * ratio + parseFloat(cs.paddingBottom)) + 'px';
+      t.scrollLeft = 0;
+      return;
+    }
+    t.classList.add('is-over'); t.scrollLeft = (t.scrollWidth - t.clientWidth) / 2;
+  }); };
 
   /* Numerals count up when they enter the viewport */
   if (!reduce && 'IntersectionObserver' in window) {
@@ -60,22 +83,30 @@
   var gal = root.querySelector('.gallery'), view = gal.querySelector('.gallery-view'), row = gal.querySelector('.gallery-row');
   var pinned = false, ticking = false, shift = 0;
   var onScroll = function(){
-    if (!pinned) return;
-    pins.forEach(function(p){ p.update(); });
-    row.style.transform = 'translate3d(' + (-progress(gal) * shift) + 'px,0,0)';
+    if (pinned) {
+      pins.forEach(function(p){ p.update(); });
+      row.style.transform = 'translate3d(' + (-progress(gal) * shift) + 'px,0,0)';
+    }
+    syncVideos();
   };
   var layout = function(){
     pinned = wide.matches && !reduce;
     pins.forEach(function(p){ p.sec.classList.toggle('is-pinned', pinned); if (!pinned) p.items.forEach(function(el){ el.classList.add('is-active'); }); });
     gal.classList.toggle('is-pinned', pinned);
-    if (!pinned) { gal.style.height = ''; row.style.transform = ''; return; }
-    view.scrollLeft = 0;
-    shift = Math.max(0, row.scrollWidth - view.clientWidth);
-    gal.style.height = (innerHeight + shift) + 'px';
+    if (!pinned) { gal.style.height = ''; row.style.transform = ''; }
+    else {
+      view.scrollLeft = 0;
+      shift = Math.max(0, row.scrollWidth - view.clientWidth);
+      gal.style.height = (innerHeight + shift) + 'px';
+    }
+    centreTree();
     onScroll();
   };
   addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(function(){ ticking = false; onScroll(); }); } }, { passive: true });
   addEventListener('resize', layout); addEventListener('load', layout);
+  document.addEventListener('visibilitychange', syncVideos);
   root.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', layout); });
+  if (document.fonts) document.fonts.ready.then(layout);
   layout();
+  setTimeout(syncVideos, 300);
 })();
