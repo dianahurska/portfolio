@@ -190,6 +190,7 @@ window.SITE.projects.push(...[
   {
     "slug": "car-rental",
     "title": "Rental Car App",
+    "servicesLabel": "Focus",
     "services": "End-to-end car rental experience",
     "cover": "assets/images/car-rental/01.png",
     "layout": "case-study",
@@ -260,6 +261,7 @@ window.SITE.projects.push(...[
   {
     "slug": "pet-shop",
     "title": "Happy Tails — Pet E-commerce",
+    "servicesLabel": "Focus",
     "services": "Simplify product discovery & checkout",
     "cover": "assets/images/work/pet-shop.png",
     "layout": "case-study",

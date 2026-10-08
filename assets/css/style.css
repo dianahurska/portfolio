@@ -206,7 +206,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding: 18px var(--gutter) 0; }
 .about-bio { display: grid; grid-template-columns: 68px 1fr; max-width: 520px; }
 .about-bio .lbl { color: var(--muted); text-transform: uppercase; font-size: 14px; line-height: 1.8; }
-.about-bio p { font-size: 14px; line-height: 1.8; max-width: 380px; }
+.about-bio p { font-size: 14px; line-height: 1.8; max-width: 440px; }
 .about-socials { display: flex; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 16px; font-size: 14px; line-height: 1; letter-spacing: var(--tight); color: var(--nav); text-transform: uppercase; max-width: 380px; }
 .about-socials a:hover { color: var(--text); }
 .portrait-wrap { position: relative; justify-self: end; width: 320px; padding: 0 0 60px 80px; }
@@ -218,8 +218,8 @@ button, input, textarea { font: inherit; color: inherit; }
 .portrait-wrap { width: 394px; }
 .page { overflow-x: hidden; }
 .about-grid > div:first-child { position: relative; z-index: 2; }
-.marquee { overflow: hidden; width: 100vw; margin: 44px 0 0 calc(var(--gutter) * -1); pointer-events: none; }
-.marquee-track { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+.marquee { overflow: hidden; width: 100%; margin: 44px 0 0; pointer-events: none; }
+.marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
 .marquee-track span { color: var(--accent); text-transform: uppercase; font-size: 20px; line-height: 1; letter-spacing: var(--tight); padding: 0 0 0 54px; white-space: nowrap; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
@@ -421,7 +421,6 @@ button, input, textarea { font: inherit; color: inherit; }
   .page { padding-top: 100px; }
   .page-title { max-width: var(--site-max); margin-inline: auto; padding-bottom: 80px; }
   .about-grid { max-width: var(--site-max); margin: 14px auto 0; padding-top: 16px; }
-  .marquee { margin-left: calc((min(100vw, var(--site-max)) - 100vw) / 2 - var(--gutter)); }
   .touch { max-width: var(--site-max); margin-inline: auto; padding: 100px 40px 80px; }
   .touch h2 { margin-bottom: 38px; }
 

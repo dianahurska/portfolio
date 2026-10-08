@@ -176,11 +176,11 @@
         <div class="about-grid">
           <div>
             <div class="about-bio reveal"><span class="lbl">${esc(A.label)}</span><p>${esc(A.bio)}</p></div>
-            <div class="marquee" aria-hidden="true"><div class="marquee-track">${skills.concat(skills).map((f) => `<span>${esc(f)}</span>`).join("")}</div></div>
             <div class="about-bio"><span></span><div class="about-socials">${S.socials.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}</div></div>
           </div>
           ${A.portrait ? `<div class="portrait-wrap reveal"><div class="portrait-frame"></div><img src="${esc(A.portrait)}" alt="${esc(S.name)}"></div>` : ""}
         </div>
+        <div class="marquee" aria-hidden="true"><div class="marquee-track">${skills.concat(skills).map((f) => `<span>${esc(f)}</span>`).join("")}</div></div>
       </section>
       <section class="touch">
         <div>
