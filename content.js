@@ -150,7 +150,7 @@ window.SITE = {
     label: "I am",
     skills: ["Product Discovery", "UX Strategy", "Interaction Design", "Information Architecture", "Design Systems", "Product Analytics", "A/B Testing", "Figma", "Design Systems", "Google Analytics", "Hotjar", "Maze"],
     bio: "Senior Product Designer with end-to-end experience across web and mobile, specializing in complex workflows, information architecture, interaction design, design systems, and AI-powered product experiences. Strong in translating business and technical constraints into scalable UX, validating decisions through research, prototypes, and behavioral data, and partnering with Product and Engineering from discovery through delivery.",
-    portrait: "assets/images/portrait.svg"
+    portrait: "assets/images/portrait.JPG"
   },
 
   contact: {
