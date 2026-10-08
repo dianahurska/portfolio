@@ -26,8 +26,8 @@
   if (!reduce && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(es){ es.forEach(function(e){
       if (!e.isIntersecting) return; io.unobserve(e.target);
-      var el = e.target, to = +el.dataset.count, t0 = performance.now(), dur = 1100;
-      (function tick(now){ var p = clamp((now - t0) / dur), k = 1 - Math.pow(1 - p, 4);
+      var el = e.target, to = +el.dataset.count, t0 = performance.now(), dur = 2000;
+      (function tick(now){ var p = clamp((now - t0) / dur), k = 1 - Math.pow(1 - p, 3);
         el.textContent = Math.round(to * k); if (p < 1) requestAnimationFrame(tick); })(t0);
     }); }, { threshold: .6 });
     root.querySelectorAll('[data-count]').forEach(function(el){ io.observe(el); });

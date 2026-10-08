@@ -7,7 +7,8 @@
 @font-face { font-family: "Inter"; src: url("../fonts/work-inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 
 /* AURA only: preserve the approved layout while isolating the site's short class names. */
-.aura-case, .aura-case :not(img) { all: revert; box-sizing: border-box; }
+/* Keep image dimensions and SVG geometry attributes intact. */
+.aura-case, .aura-case :not(img, svg, svg *) { all: revert; box-sizing: border-box; }
 
 .aura-case { letter-spacing: normal; padding-top: 64px; }
 
@@ -231,9 +232,8 @@
 .aura-case .chain li::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--line)}
 .aura-case .chain li::after{content:"";position:absolute;left:0;top:0;width:11px;height:11px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--blue)}
 .aura-case .chain li:first-child,.aura-case .chain li:last-child{color:var(--fg);font-weight:500}
-.aura-case .chain li:last-child{padding-right:0;white-space:nowrap}
-.aura-case .chain li:last-child::after{background:var(--blue)}
-.aura-case .chain li:last-child::before{display:none}
+.aura-case .chain li:last-child{padding-right:0;white-space:nowrap;text-align:right}
+.aura-case .chain li:last-child::after{left:auto;right:0;background:var(--blue)}
 .js-rv .aura-case .chain li{opacity:0;transform:translateX(-14px)}
 .js-rv .aura-case .rv.in .chain li{opacity:1;transform:none;transition:opacity .5s ease calc(var(--k)*110ms + .2s),transform .6s var(--ease) calc(var(--k)*110ms + .2s)}
 .aura-case .ltv p.muted{font-size:var(--t-sm)}
@@ -391,6 +391,9 @@ body[data-device="desktop"] .aura-case .shots[data-set="desktop"]{display:block;
 .aura-case .chain li{padding:0 0 16px 26px}
 .aura-case .chain li::before{left:5px;right:auto;top:0;bottom:0;width:1px;height:auto}
 .aura-case .chain li::after{top:4px}
+.aura-case .chain li:last-child{text-align:left}
+.aura-case .chain li:last-child::before{display:none}
+.aura-case .chain li:last-child::after{left:0;right:auto}
 .aura-case .tiles.n4{grid-template-columns:repeat(2,minmax(0,1fr))}
 .aura-case .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
 .aura-case .cols.n3{grid-template-columns:repeat(2,minmax(0,1fr))}

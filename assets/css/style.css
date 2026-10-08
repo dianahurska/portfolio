@@ -140,8 +140,8 @@ button, input, textarea { font: inherit; color: inherit; }
 
 /* Numbers */
 .numbers { padding-top: 140px; }
-/* Rolling counter, timings measured from the original: each digit column scrolls 0 → target
-   in 2.7s after a short delay; the blocks fade up 14px with a small stagger. */
+/* Each digit column scrolls 0 → target in 3.6s after a short delay;
+   the blocks fade up 14px with a small stagger. */
 .numbers-grid { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 40px 96px; }
 .num { display: flex; flex-direction: column; opacity: 0; transform: translateY(14px); transition: opacity .6s ease-out, transform .6s ease-out; }
 .num.in { opacity: 1; transform: none; }
@@ -156,7 +156,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .num .lbl { color: var(--muted); font-size: 14px; line-height: 1.8; margin-top: 4px; }
 .digit { display: inline-flex; justify-content: center; width: .65em; height: 1em; }
 .digit + .digit { margin-left: -.17em; }
-.digit > span { display: flex; flex-direction: column; will-change: transform; transition: transform 2.7s cubic-bezier(.5, .1, .2, .9) .175s; }
+.digit > span { display: flex; flex-direction: column; will-change: transform; transition: transform 3.6s cubic-bezier(.5, .1, .2, .9) .175s; }
 .digit > span > span { height: 1em; line-height: 1; margin-bottom: 1px; display: flex; align-items: center; justify-content: center; }
 
 /* Stack */
