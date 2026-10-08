@@ -158,6 +158,7 @@
 .aura-case .frame--video > img{box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
 .aura-case .frame--bleed{padding:0}
 .aura-case .frame--bleed > img{border-radius:0}
+.aura-case .frame--bleed > video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#000}
 .aura-case .phone{position:relative;aspect-ratio:640/1391;border-radius:15% / 6.9%;overflow:hidden;background:#000;box-shadow:0 0 0 1px rgba(255,255,255,.22),0 0 0 6px #060606,0 0 0 7px rgba(255,255,255,.1)}
 .aura-case .phone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
 

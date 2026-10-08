@@ -158,7 +158,7 @@ window.SITE.workProjects = [
       { label: "Experience", value: "Explainable decisions, approvals & progressive automation" },
       { label: "Platform", value: "Mobile app + Web dashboard" }
     ],
-    cover: "assets/images/aura/hero-laptop.webp",
+    cover: "assets/images/aura/aura-cover.webp",
     href: "project.html?p=aura"
   },
   {
@@ -355,7 +355,7 @@ window.SITE.projects.push({
   title: "AURA — AI Financial Agent",
   servicesLabel: "Challenge",
   services: "Designing trust, control & progressive autonomy in fintech",
-  cover: "assets/images/aura/hero-laptop.webp",
+  cover: "assets/images/aura/aura-cover.webp",
   layout: "aura",
   body: "assets/cases/aura.html"
 });

@@ -53,8 +53,10 @@
       </div>
     </div>
   </div>
-  <!-- VIDEO SLOT · hero: replace <img> with <video autoplay muted loop playsinline poster="assets/hero-laptop.webp" src="assets/aura-desktop-macbook.mp4"> -->
-  <figure class="frame frame--bleed"><img src="assets/hero-laptop.webp" width="1440" height="810" alt="AURA desktop dashboard on a laptop"></figure>
+  <figure class="frame frame--bleed"><video class="hero-video" data-auto autoplay muted loop playsinline preload="auto" poster="assets/hero.webp" width="3840" height="2160" aria-label="AURA desktop: full product overview">
+    <source src="assets/hero-1080.mp4" type="video/mp4" media="(max-width: 899px)">
+    <source src="assets/hero-4k.mp4" type="video/mp4">
+  </video></figure>
 </header>
 
 <!-- ============ 02 THE PROBLEM (merged with business problem) ============ -->
