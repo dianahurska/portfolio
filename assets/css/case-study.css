@@ -15,6 +15,9 @@
 .case-related img { width: 100%; aspect-ratio: 334 / 230; object-fit: cover; transition: opacity .45s ease; }
 .case-related:hover img { opacity: .7; }
 .case-related:focus-visible, .case-carousel:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
+@media (min-width: 810px) {
+  .case-more { padding-bottom: 44px; margin-bottom: 60px; }
+}
 @media (max-width: 1199px) { .case-study { padding-inline: 20px; } }
 @media (max-width: 809px) {
   .case-study { max-width: 500px; padding: 120px 16px 0; }

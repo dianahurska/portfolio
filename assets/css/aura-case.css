@@ -472,3 +472,9 @@ body[data-device="mobile"] .aura-case .stage--video .pv[data-set="mobile"],body[
 
 /* Keep the shared header above the hero, without covering full-viewport pinned slides. */
 body[data-case="aura"] > .header { position: absolute; }
+
+/* Use the same desktop page bounds and case offset as Prysm. */
+@media (min-width: 810px) {
+  .aura-case { --gutter: var(--desktop-gutter); --max: var(--site-max); --sec: 140px; padding-top: 0; }
+  .aura-case .hero { padding-top: 120px; }
+}

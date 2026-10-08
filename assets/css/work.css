@@ -28,6 +28,10 @@ body[data-page="work"] { font-family: "Work Inter", var(--font); }
 .work-title.work-animated { transition-delay: .2s; }
 body[data-page="work"] .footer { margin-top: 0; }
 
+@media (min-width: 810px) {
+  .work-page { padding-top: 100px; }
+}
+
 @media (hover: hover) and (min-width: 810px) {
   .work-card:hover { background: #171717; }
   .work-card:hover .work-info { padding: 20px 20px 20px 0; }

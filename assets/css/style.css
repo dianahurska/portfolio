@@ -14,9 +14,6 @@
   --font-num: "General Sans", "Inter", sans-serif;
   --tight: -0.05em;
 }
-@media (min-width: 1200px) {
-  :root { --gutter: clamp(64px, 5vw, 96px); }
-}
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; background: var(--bg); }
@@ -374,4 +371,79 @@ button, input, textarea { font: inherit; color: inherit; }
   .blk-quote p { font-size: 18px; }
   .blk-split { grid-template-columns: 1fr; gap: 30px; padding: 30px 0 60px; }
   .more { grid-template-columns: 1fr; }
+}
+
+/* Prysm desktop geometry: 1500px pages and 1410px header/footer content. */
+@media (min-width: 810px) {
+  :root {
+    --site-max: 1500px;
+    --chrome-max: 1410px;
+    --desktop-gutter: 20px;
+    --gutter: var(--desktop-gutter);
+    --chrome-gutter: 44px;
+  }
+  .header {
+    height: 69px;
+    padding: 0 max(var(--chrome-gutter), calc((100% - var(--chrome-max)) / 2));
+    align-items: center;
+  }
+  .nav { gap: 4px; padding-top: 0; }
+  .nav a:not(.mail):not(.at) { padding: 8px; }
+  .nav .mail { margin-block: 0; }
+
+  .home, .section { max-width: var(--site-max); margin-inline: auto; }
+  .home {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 64%);
+    gap: 0;
+    padding-top: 85px;
+    padding-bottom: 120px;
+  }
+  .home-side .sticky {
+    top: 85px;
+    height: 100vh;
+    min-height: 0;
+    max-width: 450px;
+    padding: 0 40px 120px 0;
+  }
+  .project-card .info { padding: 30px 3%; }
+
+  .footer {
+    padding: 40px max(var(--chrome-gutter), calc((100% - var(--chrome-max)) / 2));
+  }
+  .footer-top { min-height: 30px; }
+  .footer-mail { display: block; margin-block: 65px; }
+  .footer-mid { position: relative; padding-bottom: 16px; border-bottom: 0; }
+  .footer-mid::after { content: ""; position: absolute; inset: auto 0 0; height: 1px; background: var(--line); }
+  .footer-mid nav { gap: 0; }
+  .footer-mid nav a { padding-block: 8px; }
+  .footer-bot { padding-top: 33px; }
+
+  .page { padding-top: 100px; }
+  .page-title { max-width: var(--site-max); margin-inline: auto; padding-bottom: 80px; }
+  .about-grid { max-width: var(--site-max); margin: 14px auto 0; padding-top: 16px; }
+  .marquee { margin-left: calc((min(100vw, var(--site-max)) - 100vw) / 2 - var(--gutter)); }
+  .touch { max-width: var(--site-max); margin-inline: auto; padding: 100px 40px 80px; }
+  .touch h2 { margin-bottom: 38px; }
+
+  /* Shared outer spacing also applies to the older project routes. */
+  body[data-page="project"] #app:not(.aura-case):not(.case-study) { max-width: var(--site-max); margin-inline: auto; }
+  .p-hero { padding-top: 120px; }
+  .p-head { padding-top: 74px; padding-bottom: 29px; }
+  .p-meta { padding-block: 16px; }
+  .p-about { padding-top: 80px; padding-bottom: 140px; }
+  .blocks { gap: 0; }
+  .blocks > * + .blk-img, .blocks > * + .blk-pair, .blocks > * + .blk-video { margin-top: 140px; }
+  .blk-text { padding: 24px 0 0; }
+  .blk-text h3, .blk-split h3 { margin-bottom: 19px; }
+  .blk-quote { margin-top: 140px; padding-block: 0; }
+  .blk-split { margin-top: 140px; padding-block: 0; }
+  .more { margin-top: 140px; margin-bottom: 60px; padding-block: 44px; }
+}
+@media (min-width: 810px) and (max-width: 1199px) {
+  body[data-page="home"], body[data-page="work"] { --chrome-gutter: 20px; }
+  .home-side .sticky { padding-right: 30px; }
+  .touch { padding-inline: 20px; }
+}
+@media (min-width: 1200px) {
+  :root { --desktop-gutter: 44px; }
 }
