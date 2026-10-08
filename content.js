@@ -22,19 +22,25 @@ window.SITE = {
       {
         title: "Product & UX",
         items: [
-          "Product Discovery & UX Strategy",
-          "Interaction Design & Information Architecture",
-          "Design Systems & Cross-platform UX",
-          "Product Analytics & A/B Testing",
-          "Stakeholder Management & Cross-functional Collaboration"
+          "Product Discovery",
+          "UX Strategy",
+          "Information Architecture",
+          "Cross-platform UX",
+          "Product Analytics",
+          "A/B Testing",
+          "Cross-functional Collaboration"
         ]
       },
       {
         title: "Design & AI Tools",
         items: [
-          "AI-assisted Research, Ideation & Prototyping",
-          "Figma — Prototyping, Design Systems, Dev Mode",
-          "Google Analytics, Hotjar, Maze",
+          "AI-assisted Research",
+          "Prototyping",
+          "Figma",
+          "Design Systems",
+          "Google Analytics",
+          "Hotjar",
+          "Maze",
           "Adobe Creative Suite"
         ]
       }
