@@ -84,14 +84,24 @@
   var pinned = false, ticking = false, shift = 0;
   var onScroll = function(){
     if (pinned) {
-      pins.forEach(function(p){ p.update(); });
+      pins.forEach(function(p){ if (p.sec.classList.contains('is-pinned')) p.update(); });
       row.style.transform = 'translate3d(' + (-progress(gal) * shift) + 'px,0,0)';
     }
     syncVideos();
   };
   var layout = function(){
     pinned = wide.matches && !reduce;
-    pins.forEach(function(p){ p.sec.classList.toggle('is-pinned', pinned); if (!pinned) p.items.forEach(function(el){ el.classList.add('is-active'); }); });
+    pins.forEach(function(p){
+      p.sec.classList.toggle('is-pinned', pinned);
+      if (pinned) {
+        var available = p.sec.querySelector('.pin-list').clientHeight;
+        var fits = [].every.call(p.items, function(el){
+          return el.querySelector('.copy').scrollHeight <= available;
+        });
+        p.sec.classList.toggle('is-pinned', fits);
+      }
+      if (!p.sec.classList.contains('is-pinned')) p.items.forEach(function(el){ el.classList.add('is-active'); });
+    });
     gal.classList.toggle('is-pinned', pinned);
     if (!pinned) { gal.style.height = ''; row.style.transform = ''; }
     else {

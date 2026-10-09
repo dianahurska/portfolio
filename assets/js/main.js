@@ -186,9 +186,9 @@
         <div>
           <h2>Get in touch</h2>
           <form class="form" id="contact-form">
-            <input name="name" placeholder="Name" required>
-            <input name="email" type="email" placeholder="Your email" required>
-            <textarea name="message" placeholder="Message" required></textarea>
+            <input name="name" placeholder="Name" aria-label="Name" autocomplete="name" required>
+            <input name="email" type="email" placeholder="Your email" aria-label="Your email" autocomplete="email" required>
+            <textarea name="message" placeholder="Message" aria-label="Message" required></textarea>
             <button type="submit">Send message ${arrow}</button>
             <p class="status" id="form-status" hidden></p>
           </form>
@@ -220,7 +220,11 @@
   /* ---------- Project ---------- */
   function project() {
     const slug = new URLSearchParams(location.search).get("p");
-    const idx = Math.max(0, S.projects.findIndex((p) => p.slug === slug));
+    const idx = S.projects.findIndex((p) => p.slug === slug);
+    if (idx < 0) {
+      location.replace("work.html");
+      return;
+    }
     const P = S.projects[idx];
     document.title = `${P.title} — ${S.name}`;
     if (P.layout === "aura") {

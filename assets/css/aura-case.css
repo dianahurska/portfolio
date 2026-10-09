@@ -256,10 +256,10 @@
 .aura-case .concept .n small{font:500 var(--t-xs) var(--body);color:var(--blue-soft)}
 .aura-case .concept p{margin-top:4px;font-size:var(--t-sm)}
 .aura-case .concept .why{color:var(--muted)}
-.aura-case .concept:not(.chosen) .n{color:#c4c4c4}
+.aura-case .concept:not(.chosen) .n{color:var(--muted)}
 .aura-case .concept:not(.chosen) h3{color:#fff}
-.aura-case .concept:not(.chosen) p{color:#c4c4c4}
-.aura-case .concept:not(.chosen) .why{color:#c4c4c4}
+.aura-case .concept:not(.chosen) p{color:var(--muted)}
+.aura-case .concept:not(.chosen) .why{color:var(--muted)}
 .aura-case .concept.chosen{border-bottom:0;border-radius:0 0 var(--r) var(--r);background:color-mix(in srgb,var(--blue) 16%,var(--bg))}
 .aura-case .concept.chosen .n{color:var(--blue-soft)}
 .aura-case .concept.chosen h3{display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--fg)}
@@ -378,7 +378,7 @@ body[data-device="mobile"] .aura-case .stage--video .pv[data-set="mobile"],body[
 .aura-case .pager{display:none}
 
 @media (min-width:900px) and (min-height:640px) and (prefers-reduced-motion:no-preference){.aura-case .pin.is-pinned .pin-track{height:calc(var(--n)*100svh)}
-.aura-case .pin.is-pinned .pin-sticky{position:sticky;top:env(safe-area-inset-top,0px);height:100svh;display:flex;flex-direction:column;padding-block:clamp(20px,3svh,32px)}
+.aura-case .pin.is-pinned .pin-sticky{position:sticky;top:var(--header-clearance);height:calc(100svh - var(--header-clearance));display:flex;flex-direction:column;padding-block:clamp(20px,3svh,32px)}
 .aura-case .pin.is-pinned .pin-list{flex:1;min-height:0;position:relative;display:block;padding-top:0;margin-top:clamp(18px,3svh,28px)}
 .aura-case .pin.is-pinned .pin-item{position:absolute;inset:0;align-items:stretch;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility 0s .45s}
 .aura-case .pin.is-pinned .pin-item .copy{transform:translateY(24px);transition:transform .7s var(--ease)}
@@ -388,12 +388,13 @@ body[data-device="mobile"] .aura-case .stage--video .pv[data-set="mobile"],body[
 .aura-case .pin.is-pinned .stage{height:100%;grid-template-rows:auto 1fr}
 .aura-case #core.is-pinned .pin-item,.aura-case #iterations.is-pinned .pin-item{align-items:center}
 .aura-case #core.is-pinned .stage-wrap,.aura-case #iterations.is-pinned .stage-wrap{align-self:center}
-.aura-case #core.is-pinned .stage--video{height:auto;width:min(100%,calc((100svh - 250px) * 1.3464))}
+.aura-case #core.is-pinned .stage--video{height:auto;width:min(100%,calc((100svh - 250px - var(--header-clearance)) * 1.3464))}
 .aura-case #concept .wf{width:min(100%,calc((100svh - 250px) * 1.3464))}
 .aura-case #iterations .head h2{max-width:none}
-.aura-case #iterations.is-pinned .stage--ba{grid-template-rows:1fr;height:auto;width:min(100%,calc((100svh - 285px) * 1.3464))}
-.aura-case .pin.is-pinned .pager{display:grid;gap:10px;position:absolute;right:max(-46px,calc(8px - var(--gutter)));top:50%;translate:0 -50%;padding:14px 11px;border-radius:999px;background:var(--surface)}
-.aura-case .pager button{all:unset;cursor:pointer;width:6px;height:6px;border-radius:999px;background:var(--faint);transition:height .45s var(--ease),background .3s}
+.aura-case #iterations.is-pinned .stage--ba{grid-template-rows:1fr;height:auto;width:min(100%,calc((100svh - 285px - var(--header-clearance)) * 1.3464))}
+.aura-case .pin.is-pinned .pager{display:grid;gap:18px;position:absolute;right:max(-46px,calc(8px - var(--gutter)));top:50%;translate:0 -50%;padding:14px 11px;border-radius:999px;background:var(--surface)}
+.aura-case .pager button{all:unset;position:relative;cursor:pointer;width:6px;height:6px;border-radius:999px;background:var(--faint);transition:height .45s var(--ease),background .3s}
+.aura-case .pager button::after{content:"";position:absolute;inset:-9px}
 .aura-case .pager button:hover{background:var(--muted)}
 .aura-case .pager button[aria-current="true"]{height:28px;background:var(--fg)}
 .aura-case .pager button:focus-visible{outline:2px solid var(--blue-soft);outline-offset:3px}
@@ -406,7 +407,7 @@ body[data-device="mobile"] .aura-case .stage--video .pv[data-set="mobile"],body[
 .aura-case .gallery-row{display:flex;gap:clamp(16px,2vw,28px);padding-inline:var(--gutter);width:max-content}
 .aura-case .gallery-row .mock{height:min(72svh,660px);width:auto;max-width:none;flex:none;transition:transform .5s var(--ease)}
 .aura-case .gallery-row .mock:hover{transform:translateY(-8px)}
-.aura-case .gallery.is-pinned .gallery-sticky{position:sticky;top:env(safe-area-inset-top,0px);height:100svh;display:grid;align-items:center}
+.aura-case .gallery.is-pinned .gallery-sticky{position:sticky;top:var(--header-clearance);height:calc(100svh - var(--header-clearance));display:grid;align-items:center}
 .aura-case .gallery.is-pinned .gallery-view{overflow:hidden;padding-block:16px}
 .aura-case .gallery.is-pinned .gallery-row{will-change:transform}
 .aura-case .end{height:var(--sec)}
@@ -471,8 +472,10 @@ body[data-device="mobile"] .aura-case .stage--video .pv[data-set="mobile"],body[
 
 
 
-/* Keep the shared header above the hero, without covering full-viewport pinned slides. */
-body[data-case="aura"] > .header { position: absolute; }
+/* Reserve room for the fixed site header in full-viewport case sections. */
+.aura-case { --header-clearance: 69px; }
+.aura-case section[id] { scroll-margin-top: 85px; }
+body[data-case="aura"] > .header { position: fixed; }
 
 /* Use the same desktop page bounds and case offset as Prysm. */
 @media (min-width: 810px) {

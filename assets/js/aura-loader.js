@@ -15,7 +15,7 @@
     try {
       const [response] = await Promise.all([
         fetch(project.body),
-        loadAsset("link", { rel: "stylesheet", href: "assets/css/aura-case.css?v=aura-concept-contrast" })
+        loadAsset("link", { rel: "stylesheet", href: "assets/css/aura-case.css?v=recruiter-review" })
       ]);
       if (!response.ok) throw new Error("Could not load the AURA case page.");
       const source = new DOMParser().parseFromString(await response.text(), "text/html");
@@ -38,7 +38,7 @@
       next.className = "case-study case-next";
       main.after(next);
       window.appendCaseProjects(next, project);
-      await loadAsset("script", { src: "assets/js/aura-case.js?v=aura-updates" });
+      await loadAsset("script", { src: "assets/js/aura-case.js?v=recruiter-review" });
       document.dispatchEvent(new Event("aura:ready"));
     } catch (error) {
       const target = document.querySelector("#app");

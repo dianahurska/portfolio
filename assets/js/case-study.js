@@ -6,11 +6,14 @@
     app.classList.add("case-study");
     app.innerHTML = `
       <h1 class="case-title">${esc(project.title)}</h1>
+      <p class="case-image-hint">Tap a slide to open it and zoom in.</p>
       <div class="case-panels">
         ${project.panels.map((panel, index) => `
+          <a class="case-panel-link" href="${esc(panel.src)}" target="_blank" rel="noopener"
+            aria-label="${esc(`${project.title} — open slide ${index + 1} at full resolution`)}">
           <img src="${esc(panel.src)}" alt="${esc(panel.alt || `${project.title} — ${index + 1}`)}"
             width="${panel.width}" height="${panel.height}"
-            loading="${index === 0 ? "eager" : "lazy"}" ${index === 0 ? 'fetchpriority="high"' : 'decoding="async"'}>`).join("")}
+            loading="${index === 0 ? "eager" : "lazy"}" ${index === 0 ? 'fetchpriority="high"' : 'decoding="async"'}></a>`).join("")}
       </div>`;
     window.appendCaseProjects(app, project);
   };

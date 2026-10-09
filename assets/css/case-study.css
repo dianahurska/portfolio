@@ -7,6 +7,9 @@
 }
 .case-panels { display: flex; flex-direction: column; gap: 0; }
 .case-panels img { display: block; width: 100%; height: auto; }
+.case-panel-link { display: block; cursor: zoom-in; }
+.case-panel-link:focus-visible { outline: 2px solid var(--text); outline-offset: -3px; }
+.case-image-hint { display: none; }
 .case-more { display: grid; grid-template-columns: 1fr min(680px, 52%); gap: 40px; margin: 0 0 100px; padding-top: 44px; }
 .case-more h2 { margin-bottom: 32px; font-size: 20px; font-weight: 500; letter-spacing: -.02em; }
 .case-carousel { display: flex; gap: 12px; min-width: 0; overflow: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; }
@@ -21,6 +24,7 @@
 @media (max-width: 1199px) { .case-study { padding-inline: 20px; } }
 @media (max-width: 809px) {
   .case-study { max-width: 500px; padding: 120px 16px 0; }
+  .case-image-hint { display: block; margin-bottom: 20px; color: #9b9b9b; font-size: 14px; line-height: 1.5; }
   .case-more { grid-template-columns: 1fr; gap: 0; margin-block: 0 60px; }
   .case-carousel { overflow-x: auto; }
   .case-related { flex-basis: 245px; }
