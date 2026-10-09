@@ -212,9 +212,9 @@ window.SITE.projects.push(...[
         "height": 2958
       },
       {
-        "src": "assets/images/car-rental/04.png",
-        "width": 5760,
-        "height": 6144
+        "src": "assets/images/car-rental/04.png?v=452d42bd",
+        "width": 7680,
+        "height": 7540
       },
       {
         "src": "assets/images/car-rental/05.png",
