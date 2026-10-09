@@ -209,7 +209,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .about-bio p { font-size: 14px; line-height: 1.8; max-width: 440px; }
 .about-socials { display: flex; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 16px; font-size: 14px; line-height: 1; letter-spacing: var(--tight); color: var(--nav); text-transform: uppercase; max-width: 380px; }
 .about-socials a:hover { color: var(--text); }
-.portrait-wrap { position: relative; justify-self: end; width: 320px; padding: 0 0 60px 80px; }
+.portrait-wrap { position: relative; z-index: 3; justify-self: end; width: 320px; padding: 0 0 60px 80px; }
 .portrait-frame { position: absolute; left: 0; top: 60px; width: 312px; height: 440px; border: 1px solid var(--line); overflow: hidden; }
 .portrait-frame::before, .portrait-frame::after { content: ""; position: absolute; left: 50%; top: 50%; width: 180%; height: 1px; background: var(--line); }
 .portrait-frame::before { transform: translate(-50%, -50%) rotate(55deg); }
@@ -217,8 +217,8 @@ button, input, textarea { font: inherit; color: inherit; }
 .portrait-wrap img { position: relative; width: 314px; aspect-ratio: 314 / 440; object-fit: cover; }
 .portrait-wrap { width: 394px; }
 .page { overflow-x: hidden; }
-.about-grid > div:first-child { position: relative; z-index: 2; }
-.marquee { overflow: hidden; width: 100%; margin: 44px 0 0; pointer-events: none; }
+.about-copy { position: relative; z-index: 2; }
+.marquee { overflow: hidden; width: 100vw; margin: 44px 0 0 calc(var(--gutter) * -1); pointer-events: none; }
 .marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
 .marquee-track span { color: var(--accent); text-transform: uppercase; font-size: 20px; line-height: 1; letter-spacing: var(--tight); padding: 0 0 0 54px; white-space: nowrap; }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -358,7 +358,9 @@ button, input, textarea { font: inherit; color: inherit; }
   .portrait-wrap { justify-self: start; width: 100%; max-width: 394px; padding-left: 40px; }
   .portrait-frame { width: calc(100% - 40px); height: auto; aspect-ratio: 314 / 440; top: 40px; }
   .portrait-wrap img { width: 100%; }
-  .marquee { margin-top: 30px; }
+  .page { position: relative; padding-bottom: 50px; }
+  .about-copy { position: static; }
+  .marquee { position: absolute; left: 0; bottom: 0; margin: 0; width: 100%; }
   .touch { grid-template-columns: 1fr; gap: 20px; padding-bottom: 80px; }
 
   .p-hero { padding-top: 72px; }
@@ -421,6 +423,7 @@ button, input, textarea { font: inherit; color: inherit; }
   .page { padding-top: 100px; }
   .page-title { max-width: var(--site-max); margin-inline: auto; padding-bottom: 80px; }
   .about-grid { max-width: var(--site-max); margin: 14px auto 0; padding-top: 16px; }
+  .marquee { margin-left: calc((min(100vw, var(--site-max)) - 100vw) / 2 - var(--gutter)); }
   .touch { max-width: var(--site-max); margin-inline: auto; padding: 100px 40px 80px; }
   .touch h2 { margin-bottom: 38px; }
 
